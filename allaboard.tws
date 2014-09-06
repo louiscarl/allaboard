@@ -1,0 +1,938 @@
+(dp0
+S'buildDestination'
+p1
+VC:\u005cUsers\u005cLouisCarl\u005cDesktop\u005ctest.html
+p2
+sS'saveDestination'
+p3
+S'C:\\Users\\LouisCarl\\Desktop\\allaboard.tws'
+p4
+sS'metadata'
+p5
+(dp6
+sS'target'
+p7
+S'sugarcane'
+p8
+sS'storyPanel'
+p9
+(dp10
+S'widgets'
+p11
+(lp12
+(dp13
+S'selected'
+p14
+I00
+sS'pos'
+p15
+(lp16
+F430.0
+aF10.0
+asS'passage'
+p17
+(itiddlywiki
+Tiddler
+p18
+(dp20
+S'text'
+p21
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	Why didn't you pay your ticket on time?\u000a</div>\u000a<div class="eric">\u000a<<keypress [[Apologize|Eric Apologize distracted]] [[What do you want me to say?|Eric Want me to say]]>>\u000a</div>
+p22
+sS'title'
+p23
+VStart
+p24
+sS'modified'
+p25
+ctime
+struct_time
+p26
+((I2014
+I9
+I5
+I20
+I52
+I17
+I4
+I248
+I1
+tp27
+(dp28
+tp29
+Rp30
+sS'tags'
+p31
+(lp32
+sS'created'
+p33
+g26
+((I2014
+I9
+I3
+I20
+I1
+I35
+I2
+I246
+I1
+tp34
+(dp35
+tp36
+Rp37
+sbsa(dp38
+g14
+I00
+sg15
+(lp39
+I10
+aI150
+asg17
+(itiddlywiki
+Tiddler
+p40
+(dp41
+g21
+VAll Aboard
+p42
+sg23
+VStoryTitle
+p43
+sg25
+g26
+((I2014
+I9
+I5
+I20
+I20
+I44
+I4
+I248
+I1
+tp44
+(dp45
+tp46
+Rp47
+sg31
+(lp48
+sg33
+g26
+((I2014
+I9
+I3
+I20
+I1
+I35
+I2
+I246
+I1
+tp49
+(dp50
+tp51
+Rp52
+sbsa(dp53
+g14
+I00
+sg15
+(lp54
+I10
+aI290
+asg17
+(itiddlywiki
+Tiddler
+p55
+(dp56
+g21
+VJoshua Skelton\u000aLouis Carl Pepin
+p57
+sg23
+VStoryAuthor
+p58
+sg25
+g26
+((I2014
+I9
+I5
+I20
+I20
+I53
+I4
+I248
+I1
+tp59
+(dp60
+tp61
+Rp62
+sg31
+(lp63
+sg33
+g26
+((I2014
+I9
+I3
+I20
+I1
+I35
+I2
+I246
+I1
+tp64
+(dp65
+tp66
+Rp67
+sbsa(dp68
+g14
+I00
+sg15
+(lp69
+F10.0
+aF10.0
+asg17
+(itiddlywiki
+Tiddler
+p70
+(dp71
+g21
+V(function() {\u000a  try {\u000a    version.extensions['keypressMacro'] = {\u000a      major:1, minor:0, revision:0 \u000a    };\u000a    macros['keypress'] = {\u000a      handler: function(place, macroName, params, parser) {\u000a        for(var i = 0; i < params.length; ++i) {\u000a          var link = params[i].split('|');\u000a          var div = insertElement(place, 'div', null, 'text');\u000a          var el = Wikifier.createInternalLink(div, link[1]);\u000a          insertText(el, '[' + (i + 1) + '] ' + link[0]);\u000a        }\u000a        var listener = function(e) {\u000a          var i = e.keyCode - 49; // 0 = 48 in ASCII\u000a          if(params[i]) {\u000a            var link = params[i].split('|');\u000a            state.display(link[1]);\u000a            document.removeEventListener('keypress', listener);\u000a          }\u000a        }\u000a        document.addEventListener('keypress', listener);\u000a      },\u000a      init: function() {\u000a      },\u000a    };\u000a  } catch(e) {\u000a    throwError(place, 'Macro error: ' + e.message); \u000a  }\u000a})();
+p72
+sg23
+VkeypressMacro
+p73
+sg25
+g26
+((I2014
+I9
+I5
+I20
+I41
+I0
+I4
+I248
+I1
+tp74
+(dp75
+tp76
+Rp77
+sg31
+(lp78
+Vscript
+p79
+asg33
+g26
+((I2014
+I9
+I3
+I20
+I2
+I51
+I2
+I246
+I1
+tp80
+(dp81
+tp82
+Rp83
+sbsa(dp84
+g14
+I00
+sg15
+(lp85
+F150.0
+aF150.0
+asg17
+(itiddlywiki
+Tiddler
+p86
+(dp87
+g21
+S'jquery:off\nhash:off\nbookmark:on\nmodernizr:on\nundo:on\nobfuscate:off\nexitprompt:off\nblankcss:on\n'
+p88
+sg23
+VStorySettings
+p89
+sg25
+g26
+((I2014
+I9
+I5
+I16
+I42
+I54
+I4
+I248
+I1
+tp90
+(dp91
+tp92
+Rp93
+sg31
+(lp94
+sg33
+g26
+((I2014
+I9
+I5
+I16
+I38
+I26
+I4
+I248
+I1
+tp95
+(dp96
+tp97
+Rp98
+sbsa(dp99
+g14
+I00
+sg15
+(lp100
+F150.0
+aF290.0
+asg17
+(itiddlywiki
+Tiddler
+p101
+(dp102
+g21
+Vbody {\u000a	background-color: #222;\u000a	color: #FFF;\u000a	font-family: helvetica;\u000a	margin: 0;\u000a	padding: 0;\u000a}\u000a#sidebar {\u000a	display: none;\u000a}\u000a.chris, .chris div {\u000a	text-shadow: 1px 1px 5px red;\u000a}\u000a.eric, .eric div {\u000a	text-shadow: 1px 1px 5px blue;\u000a}\u000a.scene {\u000a	width: 1920px;\u000a	height: /*823px*/500px;\u000a	background-color: pink;\u000a}\u000a.text {\u000a	margin-left: 20px;\u000a	margin-right: 20px;\u000a}\u000a.timer {\u000a	font-size: 100px;\u000a	text-align: center;\u000a	position: absolute;\u000a	bottom: 0px;\u000a	color: #fff;\u000a	width: 100%;\u000a}\u000a#passages {\u000a	margin-left: 0px;\u000a}\u000a.passage {\u000a	font-size: 20px;\u000a}\u000a.passage a {\u000a}\u000a.passage a:hover, .passage a:link, .passage a:visited {\u000a	color: #fff;\u000a}\u000a.perdu {\u000a	position: fixed;\u000a	top: 0px;\u000a	left: 0px;\u000a	width: 100vw;\u000a	height: 100vh;\u000a	background-color: red;\u000a	color: white;\u000a}
+p103
+sg23
+Vstylesheet
+p104
+sg25
+g26
+((I2014
+I9
+I5
+I20
+I51
+I24
+I4
+I248
+I1
+tp105
+(dp106
+tp107
+Rp108
+sg31
+(lp109
+Vstylesheet
+p110
+asg33
+g26
+((I2014
+I9
+I5
+I16
+I59
+I16
+I4
+I248
+I1
+tp111
+(dp112
+tp113
+Rp114
+sbsa(dp115
+g14
+I00
+sg15
+(lp116
+F570.0
+aF150.0
+asg17
+(itiddlywiki
+Tiddler
+p117
+(dp118
+g21
+V<div class="scene"></div>\u000a<div class="text eric">\u000a	Dude, what do you want me to say? I forgot, OK?\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Insist on the subject|Chris Insist subject]] [[Change the subject|Chris Change subject]]>>\u000a</div>
+p119
+sg23
+VEric Want me to say
+p120
+sg25
+g26
+((I2014
+I9
+I5
+I20
+I53
+I55
+I4
+I248
+I1
+tp121
+(dp122
+tp123
+Rp124
+sg31
+(lp125
+sg33
+g26
+((I2014
+I9
+I5
+I20
+I31
+I11
+I4
+I248
+I1
+tp126
+(dp127
+tp128
+Rp129
+sbsa(dp130
+g14
+I00
+sg15
+(lp131
+F290.0
+aF150.0
+asg17
+(itiddlywiki
+Tiddler
+p132
+(dp133
+g21
+V<div class="scene"></div>\u000a<div class="text eric">\u000a	I'm sorry, I forgot! At least you're here to get me out of it.\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Change the subject|Chris Change subject]] [[Press on the subject|Chris Insist subject]]>>\u000a</div>
+p134
+sg23
+VEric Apologize distracted
+p135
+sg25
+g26
+((I2014
+I9
+I5
+I20
+I54
+I38
+I4
+I248
+I1
+tp136
+(dp137
+tp138
+Rp139
+sg31
+(lp140
+sg33
+g26
+((I2014
+I9
+I5
+I20
+I32
+I54
+I4
+I248
+I1
+tp141
+(dp142
+tp143
+Rp144
+sbsa(dp145
+g14
+I00
+sg15
+(lp146
+F990.0
+aF150.0
+asg17
+(itiddlywiki
+Tiddler
+p147
+(dp148
+g21
+V<div class="scene"></div>\u000a<div class="text">\u000a	Oh shit! That's the station!\u000a</div>\u000a<<keypress [[Let's go!|Lets go]] [[I don't care|I dont care]]>>
+p149
+sg23
+VChris Missed the station
+p150
+sg25
+g26
+((I2014
+I9
+I5
+I21
+I5
+I24
+I4
+I248
+I1
+tp151
+(dp152
+tp153
+Rp154
+sg31
+(lp155
+sg33
+g26
+((I2014
+I9
+I5
+I20
+I42
+I59
+I4
+I248
+I1
+tp156
+(dp157
+tp158
+Rp159
+sbsa(dp160
+g14
+I00
+sg15
+(lp161
+F990.0
+aF290.0
+asg17
+(itiddlywiki
+Tiddler
+p162
+(dp163
+g21
+V
+p164
+sg23
+VLets go
+p165
+sg25
+g26
+((I2014
+I9
+I5
+I20
+I45
+I11
+I4
+I248
+I1
+tp166
+(dp167
+tp168
+Rp169
+sg31
+(lp170
+sg33
+g169
+sbsa(dp171
+g14
+I00
+sg15
+(lp172
+F850.0
+aF290.0
+asg17
+(itiddlywiki
+Tiddler
+p173
+(dp174
+g21
+g164
+sg23
+VI dont care
+p175
+sg25
+g26
+((I2014
+I9
+I5
+I20
+I45
+I11
+I4
+I248
+I1
+tp176
+(dp177
+tp178
+Rp179
+sg31
+(lp180
+sg33
+g179
+sbsa(dp181
+g14
+I00
+sg15
+(lp182
+F570.0
+aF290.0
+asg17
+(itiddlywiki
+Tiddler
+p183
+(dp184
+g21
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	I mean you just had to mail a check, it's not complicated.\u000a</div>\u000a<div class="eric">\u000a<<keypress [[I know|Eric I know]] [[Just shut up|Eric I know]]>>\u000a</div>
+p185
+sg23
+VChris Insist subject
+p186
+sg25
+g26
+((I2014
+I9
+I5
+I20
+I58
+I59
+I4
+I248
+I1
+tp187
+(dp188
+tp189
+Rp190
+sg31
+(lp191
+sg33
+g26
+((I2014
+I9
+I5
+I20
+I54
+I1
+I4
+I248
+I1
+tp192
+(dp193
+tp194
+Rp195
+sbsa(dp196
+g14
+I00
+sg15
+(lp197
+F290.0
+aF290.0
+asg17
+(itiddlywiki
+Tiddler
+p198
+(dp199
+g21
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	So what do you want me to say exactly?\u000a</div>\u000a<div class="eric">\u000a<<keypress [[*Explain*|Eric Explain]] [[Just show up|Eric Just show up]]>>\u000a</div>
+p200
+sg23
+VChris Change subject
+p201
+sg25
+g26
+((I2014
+I9
+I5
+I20
+I57
+I17
+I4
+I248
+I1
+tp202
+(dp203
+tp204
+Rp205
+sg31
+(lp206
+sg33
+g26
+((I2014
+I9
+I5
+I20
+I54
+I1
+I4
+I248
+I1
+tp207
+(dp208
+tp209
+Rp210
+sbsa(dp211
+g14
+I00
+sg15
+(lp212
+F290.0
+aF430.0
+asg17
+(itiddlywiki
+Tiddler
+p213
+(dp214
+g21
+g164
+sg23
+VEric Explain
+p215
+sg25
+g26
+((I2014
+I9
+I5
+I20
+I57
+I23
+I4
+I248
+I1
+tp216
+(dp217
+tp218
+Rp219
+sg31
+(lp220
+sg33
+g219
+sbsa(dp221
+g14
+I00
+sg15
+(lp222
+F430.0
+aF430.0
+asg17
+(itiddlywiki
+Tiddler
+p223
+(dp224
+g21
+g164
+sg23
+VEric Just show up
+p225
+sg25
+g26
+((I2014
+I9
+I5
+I20
+I57
+I23
+I4
+I248
+I1
+tp226
+(dp227
+tp228
+Rp229
+sg31
+(lp230
+sg33
+g229
+sbsa(dp231
+g14
+I00
+sg15
+(lp232
+F570.0
+aF430.0
+asg17
+(itiddlywiki
+Tiddler
+p233
+(dp234
+g21
+V<div class="scene"></div>\u000a<div class="text eric">\u000a	I know, stop that.\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Continue|Chris Continue]] [[Change the subject|Chris Change subject]]>>\u000a</div>
+p235
+sg23
+VEric I know
+p236
+sg25
+g26
+((I2014
+I9
+I5
+I20
+I59
+I39
+I4
+I248
+I1
+tp237
+(dp238
+tp239
+Rp240
+sg31
+(lp241
+sg33
+g26
+((I2014
+I9
+I5
+I20
+I58
+I19
+I4
+I248
+I1
+tp242
+(dp243
+tp244
+Rp245
+sbsa(dp246
+g14
+I00
+sg15
+(lp247
+F570.0
+aF570.0
+asg17
+(itiddlywiki
+Tiddler
+p248
+(dp249
+g21
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	Or call them. It's not that hard, you take the phone and BEEP BOOP. That's it, man!\u000a</div>\u000a<div class="eric">\u000a<<keypress [[I\u005c'm not an idiot|Eric Not idiot]] [[Shut up, man!|Eric Shut up]]>>\u000a</div>
+p250
+sg23
+VChris Continue
+p251
+sg25
+g26
+((I2014
+I9
+I5
+I21
+I2
+I32
+I4
+I248
+I1
+tp252
+(dp253
+tp254
+Rp255
+sg31
+(lp256
+sg33
+g26
+((I2014
+I9
+I5
+I20
+I59
+I47
+I4
+I248
+I1
+tp257
+(dp258
+tp259
+Rp260
+sbsa(dp261
+g14
+I01
+sg15
+(lp262
+F570.0
+aF710.0
+asg17
+(itiddlywiki
+Tiddler
+p263
+(dp264
+g21
+V<div class="scene"></div>\u000a<div class="text eric">\u000a	Dude, shut the fuck up! I'm already pretty pissed.\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Insist on the subject|Chris Insist subject]] [[Change the subject|Chris Change subject]]>>\u000a</div>
+p265
+sg23
+VEric Shut up
+p266
+sg25
+g26
+((I2014
+I9
+I5
+I21
+I4
+I57
+I4
+I248
+I1
+tp267
+(dp268
+tp269
+Rp270
+sg31
+(lp271
+sg33
+g26
+((I2014
+I9
+I5
+I21
+I2
+I34
+I4
+I248
+I1
+tp272
+(dp273
+tp274
+Rp275
+sbsa(dp276
+g14
+I00
+sg15
+(lp277
+F710.0
+aF710.0
+asg17
+(itiddlywiki
+Tiddler
+p278
+(dp279
+g21
+V<div class="scene"></div>\u000a<div class="text eric">\u000a	I know how to pay my tickets, I'm not an idiot. I just forgot, and you're here to help me. Can we change the subject now?\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Insist on the subject|Chris Insist subject]] [[Change the subject|Chris Change subject]]>>\u000a</div>
+p280
+sg23
+VEric Not idiot
+p281
+sg25
+g26
+((I2014
+I9
+I5
+I21
+I3
+I48
+I4
+I248
+I1
+tp282
+(dp283
+tp284
+Rp285
+sg31
+(lp286
+sg33
+g26
+((I2014
+I9
+I5
+I21
+I2
+I34
+I4
+I248
+I1
+tp287
+(dp288
+tp289
+Rp290
+sbsasS'scale'
+p291
+F1.2
+sS'snapping'
+p292
+I01
+ss.
