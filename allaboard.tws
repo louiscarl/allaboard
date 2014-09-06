@@ -5,7 +5,7 @@ VC:\u005cUsers\u005cLouisCarl\u005cDesktop\u005ctest.html
 p2
 sS'saveDestination'
 p3
-S'C:\\Users\\LouisCarl\\Desktop\\allaboard.tws'
+VC:\u005cUsers\u005cLouisCarl\u005cDocuments\u005cGitHub\u005callaboard\u005callaboard.tws
 p4
 sS'metadata'
 p5
@@ -37,7 +37,7 @@ p18
 (dp20
 S'text'
 p21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	Why didn't you pay your ticket on time?\u000a</div>\u000a<div class="eric">\u000a<<keypress [[Apologize|Eric Apologize distracted]] [[What do you want me to say?|Eric Want me to say]]>>\u000a</div>
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	Why didn't you pay your tickets on time?\u000a</div>\u000a<div class="eric">\u000a<<keypress [[Apologize|Eric Apologize distracted]] [[What do you want me to say?|Eric Want me to say]]>>\u000a</div>
 p22
 sS'title'
 p23
@@ -51,9 +51,9 @@ p26
 ((I2014
 I9
 I5
-I20
-I52
-I17
+I21
+I54
+I48
 I4
 I248
 I1
@@ -193,7 +193,7 @@ Tiddler
 p70
 (dp71
 g21
-V(function() {\u000a  try {\u000a    version.extensions['keypressMacro'] = {\u000a      major:1, minor:0, revision:0 \u000a    };\u000a    macros['keypress'] = {\u000a      handler: function(place, macroName, params, parser) {\u000a        for(var i = 0; i < params.length; ++i) {\u000a          var link = params[i].split('|');\u000a          var div = insertElement(place, 'div', null, 'text');\u000a          var el = Wikifier.createInternalLink(div, link[1]);\u000a          insertText(el, '[' + (i + 1) + '] ' + link[0]);\u000a        }\u000a        var listener = function(e) {\u000a          var i = e.keyCode - 49; // 0 = 48 in ASCII\u000a          if(params[i]) {\u000a            var link = params[i].split('|');\u000a            state.display(link[1]);\u000a            document.removeEventListener('keypress', listener);\u000a          }\u000a        }\u000a        document.addEventListener('keypress', listener);\u000a      },\u000a      init: function() {\u000a      },\u000a    };\u000a  } catch(e) {\u000a    throwError(place, 'Macro error: ' + e.message); \u000a  }\u000a})();
+V(function() {\u000a  try {\u000a    version.extensions["keypressMacro"] = {\u000a      major:1, minor:0, revision:0 \u000a    };\u000a    macros["keypress"] = {\u000a      handler: function(place, macroName, params, parser) {\u000a        for(var i = 0; i < params.length; ++i) {\u000a          var link = params[i].split("|");\u000a          var text = link[0].replace("''", "'");\u000a          var div = insertElement(place, "div", null, "text link");\u000a          var el = Wikifier.createInternalLink(div, link[1]);\u000a          insertText(el, "[" + (i + 1) + "] " + text);\u000a        }\u000a        var listener = function(e) {\u000a          var i = e.keyCode - 49; // 0 = 48 in ASCII\u000a          if(params[i]) {\u000a            var link = params[i].split("|");\u000a            state.display(link[1]);\u000a            document.removeEventListener("keypress", listener);\u000a          }\u000a        }\u000a        document.addEventListener("keypress", listener);\u000a      },\u000a      init: function() {\u000a      },\u000a    };\u000a  } catch(e) {\u000a    throwError(place, "Macro error: " + e.message); \u000a  }\u000a})();
 p72
 sg23
 VkeypressMacro
@@ -203,9 +203,9 @@ g26
 ((I2014
 I9
 I5
-I20
-I41
-I0
+I21
+I44
+I29
 I4
 I248
 I1
@@ -288,14 +288,14 @@ I00
 sg15
 (lp100
 F150.0
-aF290.0
+aF10.0
 asg17
 (itiddlywiki
 Tiddler
 p101
 (dp102
 g21
-Vbody {\u000a	background-color: #222;\u000a	color: #FFF;\u000a	font-family: helvetica;\u000a	margin: 0;\u000a	padding: 0;\u000a}\u000a#sidebar {\u000a	display: none;\u000a}\u000a.chris, .chris div {\u000a	text-shadow: 1px 1px 5px red;\u000a}\u000a.eric, .eric div {\u000a	text-shadow: 1px 1px 5px blue;\u000a}\u000a.scene {\u000a	width: 1920px;\u000a	height: /*823px*/500px;\u000a	background-color: pink;\u000a}\u000a.text {\u000a	margin-left: 20px;\u000a	margin-right: 20px;\u000a}\u000a.timer {\u000a	font-size: 100px;\u000a	text-align: center;\u000a	position: absolute;\u000a	bottom: 0px;\u000a	color: #fff;\u000a	width: 100%;\u000a}\u000a#passages {\u000a	margin-left: 0px;\u000a}\u000a.passage {\u000a	font-size: 20px;\u000a}\u000a.passage a {\u000a}\u000a.passage a:hover, .passage a:link, .passage a:visited {\u000a	color: #fff;\u000a}\u000a.perdu {\u000a	position: fixed;\u000a	top: 0px;\u000a	left: 0px;\u000a	width: 100vw;\u000a	height: 100vh;\u000a	background-color: red;\u000a	color: white;\u000a}
+Vbody {\u000a	background-color: #222;\u000a	color: #FFF;\u000a	font-family: helvetica;\u000a	margin: 0;\u000a	padding: 0;\u000a}\u000a#sidebar {\u000a	display: none;\u000a}\u000a.chris, .chris div {\u000a	text-shadow: 1px 1px 5px red;\u000a}\u000a.eric, .eric div {\u000a	text-shadow: 1px 1px 5px blue;\u000a}\u000a.scene {\u000a	width: 1920px;\u000a	height: /*823px*/500px;\u000a	background-color: pink;\u000a}\u000a.text {\u000a	margin-left: 20px;\u000a	margin-right: 20px;\u000a}\u000a.link.text {\u000a    display: inline-block;\u000a    padding: 10px;\u000a    border-radius: 20px;\u000a}\u000a.link.text:hover {\u000a    display: inline-block;\u000a    background-color: rgba(255, 255, 255, 0.2);\u000a    padding: 10px;\u000a    border-radius: 20px;\u000a}\u000a.timer {\u000a	font-size: 100px;\u000a	text-align: center;\u000a	position: absolute;\u000a	bottom: 0px;\u000a	color: #fff;\u000a	width: 100%;\u000a}\u000a#passages {\u000a	margin-left: 0px;\u000a}\u000a.passage {\u000a	font-size: 20px;\u000a}\u000a.passage a {\u000a}\u000a.passage a:hover, .passage a:link, .passage a:visited {\u000a	color: #fff;\u000a}\u000a.perdu {\u000a	position: fixed;\u000a	top: 0px;\u000a	left: 0px;\u000a	width: 100vw;\u000a	height: 100vh;\u000a	background-color: red;\u000a	color: white;\u000a}
 p103
 sg23
 Vstylesheet
@@ -305,9 +305,9 @@ g26
 ((I2014
 I9
 I5
-I20
-I51
-I24
+I21
+I35
+I57
 I4
 I248
 I1
@@ -407,9 +407,9 @@ g26
 ((I2014
 I9
 I5
-I20
-I54
-I38
+I22
+I18
+I15
 I4
 I248
 I1
@@ -447,7 +447,7 @@ Tiddler
 p147
 (dp148
 g21
-V<div class="scene"></div>\u000a<div class="text">\u000a	Oh shit! That's the station!\u000a</div>\u000a<<keypress [[Let's go!|Lets go]] [[I don't care|I dont care]]>>
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	Oh shit! That's the station!\u000a</div>\u000a<div class="eric">\u000a<<keypress [[Hurry up!|Eric Hurry up]]>>\u000a</div>
 p149
 sg23
 VChris Missed the station
@@ -457,9 +457,9 @@ g26
 ((I2014
 I9
 I5
-I21
-I5
-I24
+I22
+I22
+I11
 I4
 I248
 I1
@@ -489,7 +489,7 @@ g14
 I00
 sg15
 (lp161
-F990.0
+F570.0
 aF290.0
 asg17
 (itiddlywiki
@@ -497,84 +497,11 @@ Tiddler
 p162
 (dp163
 g21
-V
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	I mean you just had to mail a check, it's not complicated.\u000a</div>\u000a<div class="eric">\u000a<<keypress [[I know|Eric I know]] [[Just shut up|Eric I know]]>>\u000a</div>
 p164
 sg23
-VLets go
-p165
-sg25
-g26
-((I2014
-I9
-I5
-I20
-I45
-I11
-I4
-I248
-I1
-tp166
-(dp167
-tp168
-Rp169
-sg31
-(lp170
-sg33
-g169
-sbsa(dp171
-g14
-I00
-sg15
-(lp172
-F850.0
-aF290.0
-asg17
-(itiddlywiki
-Tiddler
-p173
-(dp174
-g21
-g164
-sg23
-VI dont care
-p175
-sg25
-g26
-((I2014
-I9
-I5
-I20
-I45
-I11
-I4
-I248
-I1
-tp176
-(dp177
-tp178
-Rp179
-sg31
-(lp180
-sg33
-g179
-sbsa(dp181
-g14
-I00
-sg15
-(lp182
-F570.0
-aF290.0
-asg17
-(itiddlywiki
-Tiddler
-p183
-(dp184
-g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	I mean you just had to mail a check, it's not complicated.\u000a</div>\u000a<div class="eric">\u000a<<keypress [[I know|Eric I know]] [[Just shut up|Eric I know]]>>\u000a</div>
-p185
-sg23
 VChris Insist subject
-p186
+p165
 sg25
 g26
 ((I2014
@@ -586,12 +513,12 @@ I59
 I4
 I248
 I1
-tp187
-(dp188
-tp189
-Rp190
+tp166
+(dp167
+tp168
+Rp169
 sg31
-(lp191
+(lp170
 sg33
 g26
 ((I2014
@@ -603,78 +530,146 @@ I1
 I4
 I248
 I1
-tp192
-(dp193
-tp194
-Rp195
-sbsa(dp196
+tp171
+(dp172
+tp173
+Rp174
+sbsa(dp175
 g14
 I00
 sg15
-(lp197
+(lp176
 F290.0
 aF290.0
 asg17
 (itiddlywiki
 Tiddler
-p198
-(dp199
+p177
+(dp178
 g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	So what do you want me to say exactly?\u000a</div>\u000a<div class="eric">\u000a<<keypress [[*Explain*|Eric Explain]] [[Just show up|Eric Just show up]]>>\u000a</div>
-p200
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	So what do you want me to say exactly?\u000a</div>\u000a<div class="eric">\u000a<<keypress [[They told me...|Eric They told me]] [[Just show up|Eric Just show up]]>>\u000a</div>
+p179
 sg23
 VChris Change subject
-p201
+p180
 sg25
+g26
+((I2014
+I9
+I5
+I22
+I11
+I17
+I4
+I248
+I1
+tp181
+(dp182
+tp183
+Rp184
+sg31
+(lp185
+sg33
+g26
+((I2014
+I9
+I5
+I20
+I54
+I1
+I4
+I248
+I1
+tp186
+(dp187
+tp188
+Rp189
+sbsa(dp190
+g14
+I00
+sg15
+(lp191
+F290.0
+aF430.0
+asg17
+(itiddlywiki
+Tiddler
+p192
+(dp193
+g21
+V<div class="scene"></div>\u000a<div class="text eric">\u000a	Well, when they called, they told me to bring a good citizen with me. I don't know, I guess they are going to make you swear an oath or something.\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Nothing else?|Chris Nothing else]]>>\u000a</div>
+p194
+sg23
+VEric They told me
+p195
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I15
+I24
+I4
+I248
+I1
+tp196
+(dp197
+tp198
+Rp199
+sg31
+(lp200
+sg33
 g26
 ((I2014
 I9
 I5
 I20
 I57
-I17
+I23
 I4
 I248
 I1
-tp202
-(dp203
-tp204
-Rp205
-sg31
-(lp206
-sg33
-g26
-((I2014
-I9
-I5
-I20
-I54
-I1
-I4
-I248
-I1
-tp207
-(dp208
-tp209
-Rp210
-sbsa(dp211
+tp201
+(dp202
+tp203
+Rp204
+sbsa(dp205
 g14
 I00
 sg15
-(lp212
-F290.0
+(lp206
+F430.0
 aF430.0
 asg17
 (itiddlywiki
 Tiddler
-p213
-(dp214
+p207
+(dp208
 g21
-g164
+V<div class="scene"></div>\u000a<div class="text eric">\u000a	Just show up. You set a good example and stuff. \u000a</div>\u000a<div class="chris">\u000a<<keypress [[Nothing else?|Chris Nothing else]]>>\u000a</div>
+p209
 sg23
-VEric Explain
-p215
+VEric Just show up
+p210
 sg25
+g26
+((I2014
+I9
+I5
+I22
+I15
+I39
+I4
+I248
+I1
+tp211
+(dp212
+tp213
+Rp214
+sg31
+(lp215
+sg33
 g26
 ((I2014
 I9
@@ -689,64 +684,24 @@ tp216
 (dp217
 tp218
 Rp219
-sg31
-(lp220
-sg33
-g219
-sbsa(dp221
+sbsa(dp220
 g14
 I00
 sg15
-(lp222
-F430.0
-aF430.0
-asg17
-(itiddlywiki
-Tiddler
-p223
-(dp224
-g21
-g164
-sg23
-VEric Just show up
-p225
-sg25
-g26
-((I2014
-I9
-I5
-I20
-I57
-I23
-I4
-I248
-I1
-tp226
-(dp227
-tp228
-Rp229
-sg31
-(lp230
-sg33
-g229
-sbsa(dp231
-g14
-I00
-sg15
-(lp232
+(lp221
 F570.0
 aF430.0
 asg17
 (itiddlywiki
 Tiddler
-p233
-(dp234
+p222
+(dp223
 g21
 V<div class="scene"></div>\u000a<div class="text eric">\u000a	I know, stop that.\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Continue|Chris Continue]] [[Change the subject|Chris Change subject]]>>\u000a</div>
-p235
+p224
 sg23
 VEric I know
-p236
+p225
 sg25
 g26
 ((I2014
@@ -758,12 +713,12 @@ I39
 I4
 I248
 I1
-tp237
-(dp238
-tp239
-Rp240
+tp226
+(dp227
+tp228
+Rp229
 sg31
-(lp241
+(lp230
 sg33
 g26
 ((I2014
@@ -775,45 +730,45 @@ I19
 I4
 I248
 I1
-tp242
-(dp243
-tp244
-Rp245
-sbsa(dp246
+tp231
+(dp232
+tp233
+Rp234
+sbsa(dp235
 g14
 I00
 sg15
-(lp247
+(lp236
 F570.0
 aF570.0
 asg17
 (itiddlywiki
 Tiddler
-p248
-(dp249
+p237
+(dp238
 g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	Or call them. It's not that hard, you take the phone and BEEP BOOP. That's it, man!\u000a</div>\u000a<div class="eric">\u000a<<keypress [[I\u005c'm not an idiot|Eric Not idiot]] [[Shut up, man!|Eric Shut up]]>>\u000a</div>
-p250
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	Or call them. It's not that hard, you take the phone and BEEP BOOP. That's it, man!\u000a</div>\u000a<div class="eric">\u000a<<keypress [[I''m not an idiot|Eric Not idiot]] [[Shut up, man!|Eric Shut up]]>>\u000a</div>
+p239
 sg23
 VChris Continue
-p251
+p240
 sg25
 g26
 ((I2014
 I9
 I5
 I21
-I2
-I32
+I44
+I41
 I4
 I248
 I1
-tp252
-(dp253
-tp254
-Rp255
+tp241
+(dp242
+tp243
+Rp244
 sg31
-(lp256
+(lp245
 sg33
 g26
 ((I2014
@@ -825,45 +780,45 @@ I47
 I4
 I248
 I1
-tp257
-(dp258
-tp259
-Rp260
-sbsa(dp261
+tp246
+(dp247
+tp248
+Rp249
+sbsa(dp250
 g14
-I01
+I00
 sg15
-(lp262
+(lp251
 F570.0
 aF710.0
 asg17
 (itiddlywiki
 Tiddler
-p263
-(dp264
+p252
+(dp253
 g21
-V<div class="scene"></div>\u000a<div class="text eric">\u000a	Dude, shut the fuck up! I'm already pretty pissed.\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Insist on the subject|Chris Insist subject]] [[Change the subject|Chris Change subject]]>>\u000a</div>
-p265
+V<div class="scene"></div>\u000a<div class="text eric">\u000a	Dude, shut the fuck up! I'm already pretty pissed.\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Change the subject|Chris Change subject]]>>\u000a</div>
+p254
 sg23
 VEric Shut up
-p266
+p255
 sg25
 g26
 ((I2014
 I9
 I5
-I21
-I4
-I57
+I22
+I8
+I51
 I4
 I248
 I1
-tp267
-(dp268
-tp269
-Rp270
+tp256
+(dp257
+tp258
+Rp259
 sg31
-(lp271
+(lp260
 sg33
 g26
 ((I2014
@@ -875,45 +830,45 @@ I34
 I4
 I248
 I1
-tp272
-(dp273
-tp274
-Rp275
-sbsa(dp276
+tp261
+(dp262
+tp263
+Rp264
+sbsa(dp265
 g14
 I00
 sg15
-(lp277
+(lp266
 F710.0
 aF710.0
 asg17
 (itiddlywiki
 Tiddler
-p278
-(dp279
+p267
+(dp268
 g21
-V<div class="scene"></div>\u000a<div class="text eric">\u000a	I know how to pay my tickets, I'm not an idiot. I just forgot, and you're here to help me. Can we change the subject now?\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Insist on the subject|Chris Insist subject]] [[Change the subject|Chris Change subject]]>>\u000a</div>
-p280
+V<div class="scene"></div>\u000a<div class="text eric">\u000a	I know how to pay my tickets, I'm not an idiot. I just forgot, and you're here to help me. Can we change the subject now?\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Change the subject|Chris Change subject]]>>\u000a</div>
+p269
 sg23
 VEric Not idiot
-p281
+p270
 sg25
 g26
 ((I2014
 I9
 I5
-I21
-I3
-I48
+I22
+I9
+I9
 I4
 I248
 I1
-tp282
-(dp283
-tp284
-Rp285
+tp271
+(dp272
+tp273
+Rp274
 sg31
-(lp286
+(lp275
 sg33
 g26
 ((I2014
@@ -925,14 +880,901 @@ I34
 I4
 I248
 I1
-tp287
-(dp288
-tp289
-Rp290
+tp276
+(dp277
+tp278
+Rp279
+sbsa(dp280
+g14
+I00
+sg15
+(lp281
+F290.0
+aF710.0
+asg17
+(itiddlywiki
+Tiddler
+p282
+(dp283
+g21
+V<div class="scene"></div>\u000a<div class="text eric">\u000a	I mean, it's just for unpaid parking tickets, why do I even have to go to court for that?\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Well...|Chris Explain]]>>\u000a</div>
+p284
+sg23
+VEric Complain
+p285
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I2
+I13
+I4
+I248
+I1
+tp286
+(dp287
+tp288
+Rp289
+sg31
+(lp290
+sg33
+g26
+((I2014
+I9
+I5
+I22
+I0
+I51
+I4
+I248
+I1
+tp291
+(dp292
+tp293
+Rp294
+sbsa(dp295
+g14
+I00
+sg15
+(lp296
+F290.0
+aF850.0
+asg17
+(itiddlywiki
+Tiddler
+p297
+(dp298
+g21
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	Dude, you have twenty unpaid tickets.\u000a</div>\u000a<div class="eric">\u000a<<keypress [[I heard...|Eric I heard]]>>\u000a</div>
+p299
+sg23
+VChris Explain
+p300
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I4
+I1
+I4
+I248
+I1
+tp301
+(dp302
+tp303
+Rp304
+sg31
+(lp305
+sg33
+g26
+((I2014
+I9
+I5
+I22
+I2
+I14
+I4
+I248
+I1
+tp306
+(dp307
+tp308
+Rp309
+sbsa(dp310
+g14
+I00
+sg15
+(lp311
+F290.0
+aF990.0
+asg17
+(itiddlywiki
+Tiddler
+p312
+(dp313
+g21
+V<div class="scene"></div>\u000a<div class="text eric">\u000a	Yeah, but I heard from Jake that they negociated a deal with him, he only had to pay half.\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Or...|Chris Or]]>>\u000a</div>
+p314
+sg23
+VEric I heard
+p315
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I20
+I38
+I4
+I248
+I1
+tp316
+(dp317
+tp318
+Rp319
+sg31
+(lp320
+sg33
+g26
+((I2014
+I9
+I5
+I22
+I4
+I3
+I4
+I248
+I1
+tp321
+(dp322
+tp323
+Rp324
+sbsa(dp325
+g14
+I00
+sg15
+(lp326
+F290.0
+aF1130.0
+asg17
+(itiddlywiki
+Tiddler
+p327
+(dp328
+g21
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	Or, they just put you in jail. They're the man, man. They put people in jail.\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Oh shit!|Chris Missed the station]]>>\u000a</div>
+p329
+sg23
+VChris Or
+p330
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I7
+I35
+I4
+I248
+I1
+tp331
+(dp332
+tp333
+Rp334
+sg31
+(lp335
+sg33
+g26
+((I2014
+I9
+I5
+I22
+I6
+I1
+I4
+I248
+I1
+tp336
+(dp337
+tp338
+Rp339
+sbsa(dp340
+g14
+I00
+sg15
+(lp341
+F290.0
+aF570.0
+asg17
+(itiddlywiki
+Tiddler
+p342
+(dp343
+g21
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	That's it? I just go and watch you look stupid in front of a judge?\u000a</div>\u000a<div class="eric">\u000a<<keypress [[Just unpaid tickets|Eric Complain]] [[I think so|Eric I think so]]>>\u000a</div>
+p344
+sg23
+VChris Nothing else
+p345
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I17
+I35
+I4
+I248
+I1
+tp346
+(dp347
+tp348
+Rp349
+sg31
+(lp350
+sg33
+g26
+((I2014
+I9
+I5
+I22
+I15
+I26
+I4
+I248
+I1
+tp351
+(dp352
+tp353
+Rp354
+sbsa(dp355
+g14
+I00
+sg15
+(lp356
+F430.0
+aF710.0
+asg17
+(itiddlywiki
+Tiddler
+p357
+(dp358
+g21
+V<div class="scene"></div>\u000a<div class="text eric">\u000a	That's all I know, man. You don't trust me?\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Well...|Chris Trust me]]>>\u000a</div>
+p359
+sg23
+VEric I think so
+p360
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I19
+I2
+I4
+I248
+I1
+tp361
+(dp362
+tp363
+Rp364
+sg31
+(lp365
+sg33
+g26
+((I2014
+I9
+I5
+I22
+I17
+I37
+I4
+I248
+I1
+tp366
+(dp367
+tp368
+Rp369
+sbsa(dp370
+g14
+I00
+sg15
+(lp371
+F430.0
+aF850.0
+asg17
+(itiddlywiki
+Tiddler
+p372
+(dp373
+g21
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	Yeah... I trust you?\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Oh shit!|Chris Missed the station]]>>\u000a</div>
+p374
+sg23
+VChris Trust me
+p375
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I19
+I40
+I4
+I248
+I1
+tp376
+(dp377
+tp378
+Rp379
+sg31
+(lp380
+sg33
+g26
+((I2014
+I9
+I5
+I22
+I19
+I4
+I4
+I248
+I1
+tp381
+(dp382
+tp383
+Rp384
+sbsa(dp385
+g14
+I00
+sg15
+(lp386
+F990.0
+aF290.0
+asg17
+(itiddlywiki
+Tiddler
+p387
+(dp388
+g21
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	Shit hurry up!\u000a</div>\u000a<div class="eric">\u000a<<keypress [[*Jump out*|Eric Jump out]]>>\u000a</div>
+p389
+sg23
+VEric Hurry up
+p390
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I23
+I32
+I4
+I248
+I1
+tp391
+(dp392
+tp393
+Rp394
+sg31
+(lp395
+sg33
+g26
+((I2014
+I9
+I5
+I22
+I22
+I26
+I4
+I248
+I1
+tp396
+(dp397
+tp398
+Rp399
+sbsa(dp400
+g14
+I00
+sg15
+(lp401
+F990.0
+aF430.0
+asg17
+(itiddlywiki
+Tiddler
+p402
+(dp403
+g21
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	We missed the station.\u000a</div>\u000a<div class="eric">\u000a<<keypress [[...|Eric Dot dot dot]]>>\u000a</div>
+p404
+sg23
+VEric Jump out
+p405
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I25
+I17
+I4
+I248
+I1
+tp406
+(dp407
+tp408
+Rp409
+sg31
+(lp410
+sg33
+g26
+((I2014
+I9
+I5
+I22
+I23
+I35
+I4
+I248
+I1
+tp411
+(dp412
+tp413
+Rp414
+sbsa(dp415
+g14
+I00
+sg15
+(lp416
+F990.0
+aF570.0
+asg17
+(itiddlywiki
+Tiddler
+p417
+(dp418
+g21
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	So... Do we have a plan?\u000a</div>\u000a<div class="eric">\u000a<<keypress [[...|Eric Dot dot dot 2]]>>\u000a</div>
+p419
+sg23
+VEric Dot dot dot
+p420
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I25
+I54
+I4
+I248
+I1
+tp421
+(dp422
+tp423
+Rp424
+sg31
+(lp425
+sg33
+g26
+((I2014
+I9
+I5
+I22
+I25
+I18
+I4
+I248
+I1
+tp426
+(dp427
+tp428
+Rp429
+sbsa(dp430
+g14
+I00
+sg15
+(lp431
+F990.0
+aF710.0
+asg17
+(itiddlywiki
+Tiddler
+p432
+(dp433
+g21
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	We could call a taxi.\u000a</div>\u000a<div class="eric">\u000a<<keypress [[OK|Eric Call taxi]][[Too late|Eric Too late]]>>\u000a</div>
+p434
+sg23
+VEric Dot dot dot 2
+p435
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I27
+I49
+I4
+I248
+I1
+tp436
+(dp437
+tp438
+Rp439
+sg31
+(lp440
+sg33
+g26
+((I2014
+I9
+I5
+I22
+I25
+I57
+I4
+I248
+I1
+tp441
+(dp442
+tp443
+Rp444
+sbsa(dp445
+g14
+I00
+sg15
+(lp446
+F850.0
+aF850.0
+asg17
+(itiddlywiki
+Tiddler
+p447
+(dp448
+g21
+V<div class="scene"></div>\u000a<div class="text eric">\u000a	It's too late for that, man! I'm supposed to be in court in 10 minutes!\u000a</div>\u000a<div class="chris">\u000a<<keypress [[What do you propose?|Chris What you propose]]>>\u000a</div>
+p449
+sg23
+VEric Too late
+p450
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I28
+I58
+I4
+I248
+I1
+tp451
+(dp452
+tp453
+Rp454
+sg31
+(lp455
+sg33
+g26
+((I2014
+I9
+I5
+I22
+I27
+I52
+I4
+I248
+I1
+tp456
+(dp457
+tp458
+Rp459
+sbsa(dp460
+g14
+I00
+sg15
+(lp461
+F990.0
+aF850.0
+asg17
+(itiddlywiki
+Tiddler
+p462
+(dp463
+g21
+V<div class="scene"></div>\u000a<div class="text eric">\u000a	OK, let's call a taxi! What's the number?\u000a</div>\u000a<div class="chris">\u000a<<keypress [[I don''t know|Eric I dont know]]>>\u000a</div>
+p464
+sg23
+VEric Call taxi
+p465
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I30
+I15
+I4
+I248
+I1
+tp466
+(dp467
+tp468
+Rp469
+sg31
+(lp470
+sg33
+g26
+((I2014
+I9
+I5
+I22
+I27
+I52
+I4
+I248
+I1
+tp471
+(dp472
+tp473
+Rp474
+sbsa(dp475
+g14
+I00
+sg15
+(lp476
+F850.0
+aF990.0
+asg17
+(itiddlywiki
+Tiddler
+p477
+(dp478
+g21
+V
+p479
+sg23
+VChris What you propose
+p480
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I29
+I0
+I4
+I248
+I1
+tp481
+(dp482
+tp483
+Rp484
+sg31
+(lp485
+sg33
+g484
+sbsa(dp486
+g14
+I00
+sg15
+(lp487
+F990.0
+aF990.0
+asg17
+(itiddlywiki
+Tiddler
+p488
+(dp489
+g21
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	I don't know. I forgot my cell phone too.\u000a</div>\u000a<div class="eric">\u000a<<keypress [[Fuck!|Eric Fuck]]>>\u000a</div>
+p490
+sg23
+VEric I dont know
+p491
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I31
+I8
+I4
+I248
+I1
+tp492
+(dp493
+tp494
+Rp495
+sg31
+(lp496
+sg33
+g26
+((I2014
+I9
+I5
+I22
+I30
+I18
+I4
+I248
+I1
+tp497
+(dp498
+tp499
+Rp500
+sbsa(dp501
+g14
+I00
+sg15
+(lp502
+F990.0
+aF1130.0
+asg17
+(itiddlywiki
+Tiddler
+p503
+(dp504
+g21
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	Fuck! You know I don't have a cell phone, man! Why didn't you bring it?\u000a</div>\u000a<div class="eric">\u000a<<keypress [[Told you|Chris Told you]] [[Just buy one|Chris Just buy one]]>>\u000a</div>
+p505
+sg23
+VEric Fuck
+p506
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I32
+I7
+I4
+I248
+I1
+tp507
+(dp508
+tp509
+Rp510
+sg31
+(lp511
+sg33
+g26
+((I2014
+I9
+I5
+I22
+I31
+I11
+I4
+I248
+I1
+tp512
+(dp513
+tp514
+Rp515
+sbsa(dp516
+g14
+I00
+sg15
+(lp517
+F850.0
+aF1270.0
+asg17
+(itiddlywiki
+Tiddler
+p518
+(dp519
+g21
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	Why did- I didn't bring it because I forgot it! Why do you always have to depend on me? Just buy a fucking phone.\u000a</div>\u000a
+p520
+sg23
+VChris Just buy one
+p521
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I34
+I4
+I4
+I248
+I1
+tp522
+(dp523
+tp524
+Rp525
+sg31
+(lp526
+sg33
+g26
+((I2014
+I9
+I5
+I22
+I32
+I8
+I4
+I248
+I1
+tp527
+(dp528
+tp529
+Rp530
+sbsa(dp531
+g14
+I00
+sg15
+(lp532
+F990.0
+aF1270.0
+asg17
+(itiddlywiki
+Tiddler
+p533
+(dp534
+g21
+V<div class="scene"></div>\u000a<div class="text chris">\u000a	I just told you, I forgot it. You know what you forgot to do? Pay twenty fucking parking tickets. Who does that?\u000a</div>\u000a
+p535
+sg23
+VChris Told you
+p536
+sg25
+g26
+((I2014
+I9
+I5
+I22
+I35
+I11
+I4
+I248
+I1
+tp537
+(dp538
+tp539
+Rp540
+sg31
+(lp541
+sg33
+g26
+((I2014
+I9
+I5
+I22
+I32
+I8
+I4
+I248
+I1
+tp542
+(dp543
+tp544
+Rp545
 sbsasS'scale'
-p291
+p546
 F1.2
 sS'snapping'
-p292
+p547
 I01
 ss.
