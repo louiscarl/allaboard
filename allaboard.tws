@@ -5,7 +5,7 @@ VC:\u005cUsers\u005cLouisCarl\u005cDesktop\u005ctest.html
 p2
 sS'saveDestination'
 p3
-S'C:\\Users\\LouisCarl\\Documents\\GitHub\\allaboard\\allaboard.tws'
+VC:\u005cUsers\u005cLouisCarl\u005cDocuments\u005cGitHub\u005callaboard\u005callaboard.tws
 p4
 sS'metadata'
 p5
@@ -37,7 +37,7 @@ p18
 (dp20
 S'text'
 p21
-V<div class="scene"><div class="dialog"><div class="text chris">Why didn't you pay your tickets on time?</div><div class="eric"><<keypress [[Apologize|Eric Apologize distracted]] [[What do you want me to say?|Eric Want me to say]]>></div></div></div>
+V<div class="scene"><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_talk.gif" /><div class="dialog"><div class="text chris">Why didn't you pay your tickets on time?</div><div class="eric"><<keypress [[Apologize|Eric Apologize distracted]] [[What do you want me to say?|Eric Want me to say]]>></div></div></div>
 p22
 sS'title'
 p23
@@ -51,9 +51,9 @@ p26
 ((I2014
 I9
 I6
+I12
+I1
 I10
-I16
-I27
 I5
 I249
 I1
@@ -193,7 +193,7 @@ Tiddler
 p70
 (dp71
 g21
-V(function() {\u000a  // Gamepad input\u000a  window.params = null;\u000a  window.gpFct = window.gpFct || function() {\u000a    var cont = true;\u000a    if(window.params) {\u000a      console.log('window.gpFct');\u000a      var gp = navigator.getGamepads();\u000a      if(gp) {\u000a        for(var i = 0; i < gp.length; ++i) {\u000a          if(gp[i] && gp[i].buttons.length > 0) {\u000a            console.log('gamepad ' + i + ' found');\u000a            if(gp[i].buttons[0].pressed) {\u000a              console.log('A!');\u000a              var link = window.params[0].split('|');\u000a              window.params = null;\u000a              state.display(link[1]);\u000a            }\u000a            else if(gp[i].buttons[1].pressed) {\u000a              console.log('B!');\u000a              var link = window.params[1].split('|');\u000a              window.params = null;\u000a              state.display(link[1]);\u000a            }\u000a          }\u000a        }\u000a      }\u000a    }\u000a    if(window.params) {\u000a      setTimeout(window.gpFct, 100);\u000a    }\u000a  }\u000a  try {\u000a    version.extensions['keypressMacro'] = {\u000a      major:1, minor:0, revision:0 \u000a    };\u000a    macros['keypress'] = {\u000a      handler: function(place, macroName, params, parser) {\u000a        for(var i = 0; i < params.length; ++i) {\u000a          var link = params[i].split('|');\u000a          insertElement(place, 'div');\u000a          var el = Wikifier.createInternalLink(place, link[1]);\u000a          insertText(el, '[' + (i + 1) + '] ' + link[0]);\u000a        }\u000a\u000a        // Keyboard input\u000a        var listener = function(e) {\u000a          var i = e.keyCode - 49; // 0 = 48 in ASCII\u000a          if(params[i]) {\u000a            var link = params[i].split('|');\u000a            state.display(link[1]);\u000a            document.removeEventListener('keypress', listener);\u000a          }\u000a        }\u000a        document.addEventListener('keypress', listener);\u000a\u000a        setTimeout(function() {\u000a          window.params = params;\u000a          window.gpFct();\u000a        }, 2000);\u000a      },\u000a      init: function() {\u000a      },\u000a    };\u000a  } catch(e) {\u000a    throwError(place, 'Macro error: ' + e.message); \u000a  }\u000a})();
+V(function() {\u000a  // Gamepad input\u000a  window.params = null;\u000a  window.gpFct = window.gpFct || function() {\u000a    var cont = true;\u000a    if(window.params) {\u000a      console.log('window.gpFct');\u000a      var gp = navigator.getGamepads();\u000a      if(gp) {\u000a        for(var i = 0; i < gp.length; ++i) {\u000a          if(gp[i] && gp[i].buttons.length > 0) {\u000a            console.log('gamepad ' + i + ' found');\u000a            if(gp[i].buttons[0].pressed) {\u000a              console.log('A!');\u000a              var link = window.params[0].split('|');\u000a              window.params = null;\u000a              state.display(link[1]);\u000a            }\u000a            else if(gp[i].buttons[1].pressed) {\u000a              console.log('B!');\u000a              var link = window.params[1].split('|');\u000a              window.params = null;\u000a              state.display(link[1]);\u000a            }\u000a          }\u000a        }\u000a      }\u000a    }\u000a    if(window.params) {\u000a      setTimeout(window.gpFct, 100);\u000a    }\u000a  }\u000a  try {\u000a    version.extensions['keypressMacro'] = {\u000a      major:1, minor:0, revision:0 \u000a    };\u000a    macros['keypress'] = {\u000a      handler: function(place, macroName, params, parser) {\u000a        for(var i = 0; i < params.length; ++i) {\u000a          var link = params[i].split('|');\u000a          var div = insertElement(place, 'div');\u000a          var el = Wikifier.createInternalLink(div, link[1]);\u000a          if(true) {\u000a            if(i === 0) {\u000a              el.innerHTML = '<span class="btn_a">A</span>' + link[0];\u000a            } else {\u000a              el.innerHTML = '<span class="btn_b">B</span>' + link[0];\u000a            }\u000a          } else {\u000a            insertText(el, '[' + (i + 1) + '] ' + link[0]);\u000a          }\u000a        }\u000a\u000a        // Keyboard input\u000a        var listener = function(e) {\u000a          var i = e.keyCode - 49; // 0 = 48 in ASCII\u000a          if(params[i]) {\u000a            var link = params[i].split('|');\u000a            state.display(link[1]);\u000a            document.removeEventListener('keypress', listener);\u000a          }\u000a        }\u000a        document.addEventListener('keypress', listener);\u000a\u000a        setTimeout(function() {\u000a          window.params = params;\u000a          window.gpFct();\u000a        }, 2000);\u000a      },\u000a      init: function() {\u000a      },\u000a    };\u000a  } catch(e) {\u000a    throwError(place, 'Macro error: ' + e.message); \u000a  }\u000a})();
 p72
 sg23
 VkeypressMacro
@@ -203,9 +203,9 @@ g26
 ((I2014
 I9
 I6
-I11
-I45
-I41
+I14
+I8
+I58
 I5
 I249
 I1
@@ -295,7 +295,7 @@ Tiddler
 p101
 (dp102
 g21
-Vbody {\u000a	background-color: black;\u000a	color: white;\u000a	font-family: helvetica;\u000a	margin: 0;\u000a	padding: 0;\u000a}\u000a#sidebar {\u000a	display: none;\u000a}\u000a.chris, .chris div {\u000a	text-shadow: 1px 1px 5px red;\u000a}\u000a.eric, .eric div {\u000a	text-shadow: 1px 1px 5px blue;\u000a}\u000a.scene {\u000a	width: 100vw;\u000a	height: calc(100vw * 0.42);\u000a	background-color: pink;\u000a	background-image: url('images/mockup.png');\u000a	background-size: 100%;\u000a	top: calc(50vh - (50vw * 0.42));\u000a	position: relative;\u000a}\u000a.dialog {\u000a    position: absolute;\u000a    bottom: 0px;\u000a    border: 1px solid white;\u000a    background-color: rgba(0,0,0, 0.5);\u000a	margin: 20px;\u000a}\u000a.text {\u000a	margin: 10px;\u000a}\u000a.link.text {\u000a    display: inline-block;\u000a    padding: 10px;\u000a    border-radius: 20px;\u000a}\u000a.link.text:hover {\u000a    display: inline-block;\u000a    background-color: rgba(255, 255, 255, 0.2);\u000a    padding: 10px;\u000a    border-radius: 20px;\u000a}\u000a.timer {\u000a	font-size: 100px;\u000a	text-align: center;\u000a	position: absolute;\u000a	bottom: 0px;\u000a	color: #fff;\u000a	width: 100%;\u000a}\u000a#passages {\u000a	margin-left: 0px;\u000a}\u000a.passage {\u000a	font-size: 20px;\u000a}\u000a.passage a {\u000a}\u000a.passage a:hover, .passage a:link, .passage a:visited {\u000a	color: #fff;\u000a}\u000a
+Vbody {\u000a	background-color: black;\u000a	color: white;\u000a	font-family: helvetica;\u000a	margin: 0;\u000a	padding: 0;\u000a}\u000aimg.eric {\u000a	position: absolute;\u000a	width: calc(100vw * 0.25);\u000a	left: calc(100vw * 0.25);\u000a	bottom: 0;\u000a}\u000aimg.chris {\u000a	position: absolute;\u000a	width: calc(100vw * 0.25);\u000a	left: calc(100vw * 0.42);\u000a	bottom: 0;\u000a}\u000a.btn_a {\u000a	background-color: green;\u000a	padding: 5px;\u000a	border-radius: 50%;\u000a}\u000a.btn_b {\u000a	background-color: red;\u000a	padding: 5px;\u000a	border-radius: 50%;\u000a}\u000a#sidebar {\u000a	display: none;\u000a}\u000a.chris, .chris div {\u000a	text-shadow: 1px 1px 5px red;\u000a}\u000a.eric, .eric div {\u000a	text-shadow: 1px 1px 5px blue;\u000a}\u000a.scene {\u000a	width: 100vw;\u000a	height: calc(100vw * 0.42);\u000a	background-color: pink;\u000a	background-image: url('images/mockup.png');\u000a	background-size: 100%;\u000a	top: calc(50vh - (50vw * 0.42));\u000a	position: relative;\u000a}\u000a.dialog {\u000a    position: absolute;\u000a    bottom: 0px;\u000a	margin: 20px;\u000a}\u000a.dialog .chris {\u000a	border: 1px solid white;\u000a    background-color: rgba(0,0,0, 0.5);\u000a	right: 0px;\u000a	position: relative;\u000a	width: 40vw;\u000a	left: calc(100vw - 50vw);\u000a}\u000a.dialog .eric {\u000a	border: 1px solid white;\u000a    background-color: rgba(0,0,0, 0.5);\u000a	left: 0px;\u000a	position: relative;\u000a	width: 40vw;\u000a	left: 3vw;\u000a}\u000a.text {\u000a	margin: 10px;\u000a	padding: 10px;\u000a}\u000a.link.text {\u000a    display: inline-block;\u000a    padding: 10px;\u000a    border-radius: 20px;\u000a}\u000a.link.text:hover {\u000a    display: inline-block;\u000a    background-color: rgba(255, 255, 255, 0.2);\u000a    padding: 10px;\u000a    border-radius: 20px;\u000a}\u000a.timer {\u000a	font-size: 100px;\u000a	text-align: center;\u000a	position: absolute;\u000a	bottom: 0px;\u000a	color: #fff;\u000a	width: 100%;\u000a}\u000a#passages {\u000a	margin-left: 0px;\u000a}\u000a.passage {\u000a	font-size: 20px;\u000a}\u000a.passage a {\u000a}\u000a.passage a:hover, .passage a:link, .passage a:visited {\u000a	color: #fff;\u000a}\u000a
 p103
 sg23
 Vstylesheet
@@ -305,9 +305,9 @@ g26
 ((I2014
 I9
 I6
-I9
-I55
-I36
+I14
+I7
+I49
 I5
 I249
 I1
