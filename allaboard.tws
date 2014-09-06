@@ -37,7 +37,7 @@ p18
 (dp20
 S'text'
 p21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	Why didn't you pay your tickets on time?\u000a</div>\u000a<div class="eric">\u000a<<keypress [[Apologize|Eric Apologize distracted]] [[What do you want me to say?|Eric Want me to say]]>>\u000a</div>
+V<div class="scene"><div class="dialog"><div class="text chris">Why didn't you pay your tickets on time?</div><div class="eric"><<keypress [[Apologize|Eric Apologize distracted]] [[What do you want me to say?|Eric Want me to say]]>></div></div></div>
 p22
 sS'title'
 p23
@@ -50,12 +50,12 @@ struct_time
 p26
 ((I2014
 I9
+I6
+I10
+I16
+I27
 I5
-I21
-I54
-I48
-I4
-I248
+I249
 I1
 tp27
 (dp28
@@ -295,7 +295,7 @@ Tiddler
 p101
 (dp102
 g21
-Vbody {\u000a	background-color: #222;\u000a	color: #FFF;\u000a	font-family: helvetica;\u000a	margin: 0;\u000a	padding: 0;\u000a}\u000a#sidebar {\u000a	display: none;\u000a}\u000a.chris, .chris div {\u000a	text-shadow: 1px 1px 5px red;\u000a}\u000a.eric, .eric div {\u000a	text-shadow: 1px 1px 5px blue;\u000a}\u000a.scene {\u000a	width: 1920px;\u000a	height: /*823px*/500px;\u000a	background-color: pink;\u000a}\u000a.text {\u000a	margin-left: 20px;\u000a	margin-right: 20px;\u000a}\u000a.link.text {\u000a    display: inline-block;\u000a    padding: 10px;\u000a    border-radius: 20px;\u000a}\u000a.link.text:hover {\u000a    display: inline-block;\u000a    background-color: rgba(255, 255, 255, 0.2);\u000a    padding: 10px;\u000a    border-radius: 20px;\u000a}\u000a.timer {\u000a	font-size: 100px;\u000a	text-align: center;\u000a	position: absolute;\u000a	bottom: 0px;\u000a	color: #fff;\u000a	width: 100%;\u000a}\u000a#passages {\u000a	margin-left: 0px;\u000a}\u000a.passage {\u000a	font-size: 20px;\u000a}\u000a.passage a {\u000a}\u000a.passage a:hover, .passage a:link, .passage a:visited {\u000a	color: #fff;\u000a}\u000a.perdu {\u000a	position: fixed;\u000a	top: 0px;\u000a	left: 0px;\u000a	width: 100vw;\u000a	height: 100vh;\u000a	background-color: red;\u000a	color: white;\u000a}
+Vbody {\u000a	background-color: black;\u000a	color: white;\u000a	font-family: helvetica;\u000a	margin: 0;\u000a	padding: 0;\u000a}\u000a#sidebar {\u000a	display: none;\u000a}\u000a.chris, .chris div {\u000a	text-shadow: 1px 1px 5px red;\u000a}\u000a.eric, .eric div {\u000a	text-shadow: 1px 1px 5px blue;\u000a}\u000a.scene {\u000a	width: 100vw;\u000a	height: calc(100vw * 0.42);\u000a	background-color: pink;\u000a	background-image: url('images/mockup.png');\u000a	background-size: 100%;\u000a	top: calc(50vh - (50vw * 0.42));\u000a	position: relative;\u000a}\u000a.dialog {\u000a    position: absolute;\u000a    bottom: 0px;\u000a    border: 1px solid white;\u000a    background-color: rgba(0,0,0, 0.5);\u000a	margin: 20px;\u000a}\u000a.text {\u000a	margin: 10px;\u000a}\u000a.link.text {\u000a    display: inline-block;\u000a    padding: 10px;\u000a    border-radius: 20px;\u000a}\u000a.link.text:hover {\u000a    display: inline-block;\u000a    background-color: rgba(255, 255, 255, 0.2);\u000a    padding: 10px;\u000a    border-radius: 20px;\u000a}\u000a.timer {\u000a	font-size: 100px;\u000a	text-align: center;\u000a	position: absolute;\u000a	bottom: 0px;\u000a	color: #fff;\u000a	width: 100%;\u000a}\u000a#passages {\u000a	margin-left: 0px;\u000a}\u000a.passage {\u000a	font-size: 20px;\u000a}\u000a.passage a {\u000a}\u000a.passage a:hover, .passage a:link, .passage a:visited {\u000a	color: #fff;\u000a}\u000a
 p103
 sg23
 Vstylesheet
@@ -304,12 +304,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I9
+I55
+I36
 I5
-I21
-I35
-I57
-I4
-I248
+I249
 I1
 tp105
 (dp106
@@ -347,7 +347,7 @@ Tiddler
 p117
 (dp118
 g21
-V<div class="scene"></div>\u000a<div class="text eric">\u000a	Dude, what do you want me to say? I forgot, OK?\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Insist on the subject|Chris Insist subject]] [[Change the subject|Chris Change subject]]>>\u000a</div>
+V<div class="scene"><div class="dialog"><div class="text eric">Dude, what do you want me to say? I forgot, OK?</div><div class="chris"><<keypress [[Insist on the subject|Chris Insist subject]] [[Change the subject|Chris Change subject]]>></div></div></div>
 p119
 sg23
 VEric Want me to say
@@ -356,12 +356,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I9
+I59
+I39
 I5
-I20
-I53
-I55
-I4
-I248
+I249
 I1
 tp121
 (dp122
@@ -397,7 +397,7 @@ Tiddler
 p132
 (dp133
 g21
-V<div class="scene"></div>\u000a<div class="text eric">\u000a	I'm sorry, I forgot! At least you're here to get me out of it.\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Change the subject|Chris Change subject]] [[Press on the subject|Chris Insist subject]]>>\u000a</div>
+V<div class="scene"><div class="dialog"><div class="text eric">I'm sorry, I forgot! At least you're here to get me out of it.</div><div class="chris"><<keypress [[Change the subject|Chris Change subject]] [[Press on the subject|Chris Insist subject]]>></div></div></div>
 p134
 sg23
 VEric Apologize distracted
@@ -406,12 +406,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I9
+I58
+I43
 I5
-I22
-I18
-I15
-I4
-I248
+I249
 I1
 tp136
 (dp137
@@ -447,7 +447,7 @@ Tiddler
 p147
 (dp148
 g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	Oh shit! That's the station!\u000a</div>\u000a<div class="eric">\u000a<<keypress [[Hurry up!|Eric Hurry up]]>>\u000a</div>
+V<div class="scene"></div><div class="text chris">Oh shit! That's the station!</div><div class="eric"><<keypress [[Hurry up!|Eric Hurry up]]>></div></div></div>
 p149
 sg23
 VChris Missed the station
@@ -456,12 +456,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I27
+I8
 I5
-I22
-I22
-I11
-I4
-I248
+I249
 I1
 tp151
 (dp152
@@ -497,7 +497,7 @@ Tiddler
 p162
 (dp163
 g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	I mean you just had to mail a check, it's not complicated.\u000a</div>\u000a<div class="eric">\u000a<<keypress [[I know|Eric I know]] [[Just shut up|Eric I know]]>>\u000a</div>
+V<div class="scene"><div class="dialog"><div class="text chris">I mean you just had to mail a check, it's not complicated.</div><div class="eric"><<keypress [[I know|Eric I know]] [[Just shut up|Eric I know]]>></div></div></div>
 p164
 sg23
 VChris Insist subject
@@ -506,12 +506,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I0
+I32
 I5
-I20
-I58
-I59
-I4
-I248
+I249
 I1
 tp166
 (dp167
@@ -547,7 +547,7 @@ Tiddler
 p177
 (dp178
 g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	So what do you want me to say exactly?\u000a</div>\u000a<div class="eric">\u000a<<keypress [[They told me...|Eric They told me]] [[Just show up|Eric Just show up]]>>\u000a</div>
+V<div class="scene"><div class="dialog"><div class="text chris">So what do you want me to say exactly?</div><div class="eric"><<keypress [[They told me...|Eric They told me]] [[Just show up|Eric Just show up]]>></div></div></div>
 p179
 sg23
 VChris Change subject
@@ -556,12 +556,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I0
+I7
 I5
-I22
-I11
-I17
-I4
-I248
+I249
 I1
 tp181
 (dp182
@@ -597,7 +597,7 @@ Tiddler
 p192
 (dp193
 g21
-V<div class="scene"></div>\u000a<div class="text eric">\u000a	Well, when they called, they told me to bring a good citizen with me. I don't know, I guess they are going to make you swear an oath or something.\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Nothing else?|Chris Nothing else]]>>\u000a</div>
+V<div class="scene"><div class="dialog"><div class="text eric">Well, when they called, they told me to bring a good citizen with me. I don't know, I guess they are going to make you swear an oath or something.</div><div class="chris"><<keypress [[Nothing else?|Chris Nothing else]]>></div></div></div>
 p194
 sg23
 VEric They told me
@@ -606,12 +606,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I1
+I36
 I5
-I22
-I15
-I24
-I4
-I248
+I249
 I1
 tp196
 (dp197
@@ -647,7 +647,7 @@ Tiddler
 p207
 (dp208
 g21
-V<div class="scene"></div>\u000a<div class="text eric">\u000a	Just show up. You set a good example and stuff. \u000a</div>\u000a<div class="chris">\u000a<<keypress [[Nothing else?|Chris Nothing else]]>>\u000a</div>
+V<div class="scene"><div class="dialog"><div class="text eric">Just show up. You set a good example and stuff.</div><div class="chris"><<keypress [[Nothing else?|Chris Nothing else]]>></div></div></div>
 p209
 sg23
 VEric Just show up
@@ -656,12 +656,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I2
+I3
 I5
-I22
-I15
-I39
-I4
-I248
+I249
 I1
 tp211
 (dp212
@@ -697,7 +697,7 @@ Tiddler
 p222
 (dp223
 g21
-V<div class="scene"></div>\u000a<div class="text eric">\u000a	I know, stop that.\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Continue|Chris Continue]] [[Change the subject|Chris Change subject]]>>\u000a</div>
+V<div class="scene"><div class="dialog"><div class="text eric">I know, stop that.</div><div class="chris"><<keypress [[Continue|Chris Continue]] [[Change the subject|Chris Change subject]]>></div></div></div>
 p224
 sg23
 VEric I know
@@ -706,12 +706,12 @@ sg25
 g26
 ((I2014
 I9
-I5
-I20
+I6
+I10
+I2
 I59
-I39
-I4
-I248
+I5
+I249
 I1
 tp226
 (dp227
@@ -747,7 +747,7 @@ Tiddler
 p237
 (dp238
 g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	Or call them. It's not that hard, you take the phone and BEEP BOOP. That's it, man!\u000a</div>\u000a<div class="eric">\u000a<<keypress [[I''m not an idiot|Eric Not idiot]] [[Shut up, man!|Eric Shut up]]>>\u000a</div>
+V<div class="scene"><div class="dialog"><div class="text chris">Or call them. It's not that hard, you take the phone and BEEP BOOP. That's it, man!</div><div class="eric"><<keypress [[I''m not an idiot|Eric Not idiot]] [[Shut up, man!|Eric Shut up]]>></div></div></div>
 p239
 sg23
 VChris Continue
@@ -756,12 +756,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I3
+I46
 I5
-I21
-I44
-I41
-I4
-I248
+I249
 I1
 tp241
 (dp242
@@ -797,7 +797,7 @@ Tiddler
 p252
 (dp253
 g21
-V<div class="scene"></div>\u000a<div class="text eric">\u000a	Dude, shut the fuck up! I'm already pretty pissed.\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Change the subject|Chris Change subject]]>>\u000a</div>
+V<div class="scene"><div class="dialog"></div><div class="text eric">Dude, shut the fuck up! I'm already pretty pissed.</div><div class="chris"><<keypress [[Change the subject|Chris Change subject]]>></div></div></div>
 p254
 sg23
 VEric Shut up
@@ -806,12 +806,12 @@ sg25
 g26
 ((I2014
 I9
-I5
-I22
+I6
+I10
+I17
 I8
-I51
-I4
-I248
+I5
+I249
 I1
 tp256
 (dp257
@@ -847,7 +847,7 @@ Tiddler
 p267
 (dp268
 g21
-V<div class="scene"></div>\u000a<div class="text eric">\u000a	I know how to pay my tickets, I'm not an idiot. I just forgot, and you're here to help me. Can we change the subject now?\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Change the subject|Chris Change subject]]>>\u000a</div>
+V<div class="scene"><div class="dialog"></div><div class="text eric">I know how to pay my tickets, I'm not an idiot. I just forgot, and you're here to help me. Can we change the subject now?</div><div class="chris"><<keypress [[Change the subject|Chris Change subject]]>></div></div></div>
 p269
 sg23
 VEric Not idiot
@@ -856,12 +856,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I17
+I26
 I5
-I22
-I9
-I9
-I4
-I248
+I249
 I1
 tp271
 (dp272
@@ -897,7 +897,7 @@ Tiddler
 p282
 (dp283
 g21
-V<div class="scene"></div>\u000a<div class="text eric">\u000a	I mean, it's just for unpaid parking tickets, why do I even have to go to court for that?\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Well...|Chris Explain]]>>\u000a</div>
+V<div class="scene"><div class="dialog"><div class="text eric">I mean, it's just for unpaid parking tickets, why do I even have to go to court for that?</div><div class="chris"><<keypress [[Well...|Chris Explain]]>></div></div></div>
 p284
 sg23
 VEric Complain
@@ -906,12 +906,12 @@ sg25
 g26
 ((I2014
 I9
-I5
-I22
-I2
-I13
+I6
+I10
 I4
-I248
+I56
+I5
+I249
 I1
 tp286
 (dp287
@@ -947,7 +947,7 @@ Tiddler
 p297
 (dp298
 g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	Dude, you have twenty unpaid tickets.\u000a</div>\u000a<div class="eric">\u000a<<keypress [[I heard...|Eric I heard]]>>\u000a</div>
+V<div class="scene"><div class="dialog"></div><div class="text chris">Dude, you have twenty unpaid tickets.</div><div class="eric"><<keypress [[I heard...|Eric I heard]]>></div></div></div>
 p299
 sg23
 VChris Explain
@@ -956,12 +956,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I17
+I39
 I5
-I22
-I4
-I1
-I4
-I248
+I249
 I1
 tp301
 (dp302
@@ -997,7 +997,7 @@ Tiddler
 p312
 (dp313
 g21
-V<div class="scene"></div>\u000a<div class="text eric">\u000a	Yeah, but I heard from Jake that they negociated a deal with him, he only had to pay half.\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Or...|Chris Or]]>>\u000a</div>
+V<div class="scene"><div class="dialog"></div><div class="text eric">Yeah, but I heard from Jake that they negociated a deal with him, he only had to pay half.</div><div class="chris"><<keypress [[Or...|Chris Or]]>></div></div></div>
 p314
 sg23
 VEric I heard
@@ -1006,12 +1006,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I18
+I18
 I5
-I22
-I20
-I38
-I4
-I248
+I249
 I1
 tp316
 (dp317
@@ -1047,7 +1047,7 @@ Tiddler
 p327
 (dp328
 g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	Or, they just put you in jail. They're the man, man. They put people in jail.\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Oh shit!|Chris Missed the station]]>>\u000a</div>
+V<div class="scene"><div class="dialog"></div><div class="text chris">Or, they just put you in jail. They're the man, man. They put people in jail.</div><div class="chris"><<keypress [[Oh shit!|Chris Missed the station]]>></div></div></div>
 p329
 sg23
 VChris Or
@@ -1056,12 +1056,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I18
+I15
 I5
-I22
-I7
-I35
-I4
-I248
+I249
 I1
 tp331
 (dp332
@@ -1097,7 +1097,7 @@ Tiddler
 p342
 (dp343
 g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	That's it? I just go and watch you look stupid in front of a judge?\u000a</div>\u000a<div class="eric">\u000a<<keypress [[Just unpaid tickets|Eric Complain]] [[I think so|Eric I think so]]>>\u000a</div>
+V<div class="scene"><div class="dialog"><div class="text chris">That's it? I just go and watch you look stupid in front of a judge?</div><div class="eric"><<keypress [[Just unpaid tickets|Eric Complain]] [[I think so|Eric I think so]]>></div></div></div>
 p344
 sg23
 VChris Nothing else
@@ -1106,12 +1106,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I3
+I25
 I5
-I22
-I17
-I35
-I4
-I248
+I249
 I1
 tp346
 (dp347
@@ -1147,7 +1147,7 @@ Tiddler
 p357
 (dp358
 g21
-V<div class="scene"></div>\u000a<div class="text eric">\u000a	That's all I know, man. You don't trust me?\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Well...|Chris Trust me]]>>\u000a</div>
+V<div class="scene"><div class="dialog"><div class="text eric">That's all I know, man. You don't trust me?</div><div class="chris"><<keypress [[Well...|Chris Trust me]]>></div></div></div>
 p359
 sg23
 VEric I think so
@@ -1156,12 +1156,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
 I5
-I22
 I19
-I2
-I4
-I248
+I5
+I249
 I1
 tp361
 (dp362
@@ -1197,7 +1197,7 @@ Tiddler
 p372
 (dp373
 g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	Yeah... I trust you?\u000a</div>\u000a<div class="chris">\u000a<<keypress [[Oh shit!|Chris Missed the station]]>>\u000a</div>
+V<div class="scene"><div class="dialog"></div><div class="text chris">Yeah... I trust you?</div><div class="chris"><<keypress [[Oh shit!|Chris Missed the station]]>></div></div></div>
 p374
 sg23
 VChris Trust me
@@ -1206,12 +1206,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I17
+I55
 I5
-I22
-I19
-I40
-I4
-I248
+I249
 I1
 tp376
 (dp377
@@ -1247,7 +1247,7 @@ Tiddler
 p387
 (dp388
 g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	Shit hurry up!\u000a</div>\u000a<div class="eric">\u000a<<keypress [[*Jump out*|Eric Jump out]]>>\u000a</div>
+V<div class="scene"><div class="dialog"></div><div class="text chris">Shit hurry up!</div><div class="eric"><<keypress [[*Jump out*|Eric Jump out]]>></div></div></div>
 p389
 sg23
 VEric Hurry up
@@ -1256,12 +1256,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I26
+I58
 I5
-I22
-I23
-I32
-I4
-I248
+I249
 I1
 tp391
 (dp392
@@ -1297,7 +1297,7 @@ Tiddler
 p402
 (dp403
 g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	We missed the station.\u000a</div>\u000a<div class="eric">\u000a<<keypress [[...|Eric Dot dot dot]]>>\u000a</div>
+V<div class="scene"><div class="dialog"></div><div class="text chris">We missed the station.</div><div class="eric"><<keypress [[...|Eric Dot dot dot]]>></div></div></div>
 p404
 sg23
 VEric Jump out
@@ -1306,12 +1306,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I26
+I49
 I5
-I22
-I25
-I17
-I4
-I248
+I249
 I1
 tp406
 (dp407
@@ -1347,7 +1347,7 @@ Tiddler
 p417
 (dp418
 g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	So... Do we have a plan?\u000a</div>\u000a<div class="eric">\u000a<<keypress [[...|Eric Dot dot dot 2]]>>\u000a</div>
+V<div class="scene"><div class="dialog"></div><div class="text chris">So... Do we have a plan?</div><div class="eric"><<keypress [[...|Eric Dot dot dot 2]]>></div></div></div>
 p419
 sg23
 VEric Dot dot dot
@@ -1356,12 +1356,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I26
+I38
 I5
-I22
-I25
-I54
-I4
-I248
+I249
 I1
 tp421
 (dp422
@@ -1397,7 +1397,7 @@ Tiddler
 p432
 (dp433
 g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	We could call a taxi.\u000a</div>\u000a<div class="eric">\u000a<<keypress [[OK|Eric Call taxi]][[Too late|Eric Too late]]>>\u000a</div>
+V<div class="scene"><div class="dialog"></div><div class="text chris">We could call a taxi.</div><div class="eric"><<keypress [[OK|Eric Call taxi]][[Too late|Eric Too late]]>></div></div></div>
 p434
 sg23
 VEric Dot dot dot 2
@@ -1406,12 +1406,12 @@ sg25
 g26
 ((I2014
 I9
-I5
-I22
+I6
+I10
+I26
 I27
-I49
-I4
-I248
+I5
+I249
 I1
 tp436
 (dp437
@@ -1447,7 +1447,7 @@ Tiddler
 p447
 (dp448
 g21
-V<div class="scene"></div>\u000a<div class="text eric">\u000a	It's too late for that, man! I'm supposed to be in court in 10 minutes!\u000a</div>\u000a<div class="chris">\u000a<<keypress [[What do you propose?|Chris What you propose]]>>\u000a</div>
+V<div class="scene"><div class="dialog"></div><div class="text eric">It's too late for that, man! I'm supposed to be in court in 10 minutes!</div><div class="chris"><<keypress [[What do you propose?|Chris What you propose]]>></div></div></div>
 p449
 sg23
 VEric Too late
@@ -1456,12 +1456,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I26
+I9
 I5
-I22
-I28
-I58
-I4
-I248
+I249
 I1
 tp451
 (dp452
@@ -1497,7 +1497,7 @@ Tiddler
 p462
 (dp463
 g21
-V<div class="scene"></div>\u000a<div class="text eric">\u000a	OK, let's call a taxi! What's the number?\u000a</div>\u000a<div class="chris">\u000a<<keypress [[I don''t know|Eric I dont know]]>>\u000a</div>
+V<div class="scene"><div class="dialog"></div><div class="text eric">OK, let's call a taxi! What's the number?</div><div class="chris"><<keypress [[I don''t know|Eric I dont know]]>></div></div></div>
 p464
 sg23
 VEric Call taxi
@@ -1506,12 +1506,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I25
+I58
 I5
-I22
-I30
-I15
-I4
-I248
+I249
 I1
 tp466
 (dp467
@@ -1584,7 +1584,7 @@ Tiddler
 p488
 (dp489
 g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	I don't know. I forgot my cell phone too.\u000a</div>\u000a<div class="eric">\u000a<<keypress [[Fuck!|Eric Fuck]]>>\u000a</div>
+V<div class="scene"><div class="dialog"></div><div class="text chris">I don't know. I forgot my cell phone too.</div><div class="eric"><<keypress [[Fuck!|Eric Fuck]]>></div></div></div>
 p490
 sg23
 VEric I dont know
@@ -1593,12 +1593,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I19
+I16
 I5
-I22
-I31
-I8
-I4
-I248
+I249
 I1
 tp492
 (dp493
@@ -1634,7 +1634,7 @@ Tiddler
 p503
 (dp504
 g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	Fuck! You know I don't have a cell phone, man! Why didn't you bring it?\u000a</div>\u000a<div class="eric">\u000a<<keypress [[Told you|Chris Told you]] [[Just buy one|Chris Just buy one]]>>\u000a</div>
+V<div class="scene"><div class="dialog"></div><div class="text chris">Fuck! You know I don't have a cell phone, man! Why didn't you bring it?</div><div class="eric"><<keypress [[Told you|Chris Told you]] [[Just buy one|Chris Just buy one]]>></div></div></div>
 p505
 sg23
 VEric Fuck
@@ -1643,12 +1643,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I19
+I6
 I5
-I22
-I32
-I7
-I4
-I248
+I249
 I1
 tp507
 (dp508
@@ -1684,7 +1684,7 @@ Tiddler
 p518
 (dp519
 g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	Why did- I didn't bring it because I forgot it! Why do you always have to depend on me? Just buy a fucking phone.\u000a</div>\u000a
+V<div class="scene"><div class="dialog"></div><div class="text chris">Why did- I didn't bring it because I forgot it! Why do you always have to depend on me? Just buy a fucking phone.</div></div>
 p520
 sg23
 VChris Just buy one
@@ -1693,12 +1693,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I18
+I42
 I5
-I22
-I34
-I4
-I4
-I248
+I249
 I1
 tp522
 (dp523
@@ -1734,7 +1734,7 @@ Tiddler
 p533
 (dp534
 g21
-V<div class="scene"></div>\u000a<div class="text chris">\u000a	I just told you, I forgot it. You know what you forgot to do? Pay twenty fucking parking tickets. Who does that?\u000a</div>\u000a
+V<div class="scene"><div class="dialog"></div><div class="text chris">I just told you, I forgot it. You know what you forgot to do? Pay twenty fucking parking tickets. Who does that?</div></div>\u000a
 p535
 sg23
 VChris Told you
@@ -1743,12 +1743,12 @@ sg25
 g26
 ((I2014
 I9
+I6
+I10
+I18
+I53
 I5
-I22
-I35
-I11
-I4
-I248
+I249
 I1
 tp537
 (dp538
