@@ -37,7 +37,7 @@ p18
 (dp20
 S'text'
 p21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Pardonnez-moi, vous avez une cigarette?</div><div class="options eric"><<keypress [[Non|Eric No]] [[Oui| Eric Yes]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>\u000a<<set $cigarette to true>>
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Pardonnez-moi, vous avez une cigarette?</div><div class="options eric"><<keypress [[Non|Eric No]] [[Oui| Eric Yes]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>\u000a<<set $cigarette to true>>
 p22
 sS'title'
 p23
@@ -50,12 +50,12 @@ struct_time
 p26
 ((I2014
 I9
+I7
+I13
+I48
+I32
 I6
-I20
-I52
-I43
-I5
-I249
+I250
 I1
 tp27
 (dp28
@@ -85,8 +85,8 @@ g14
 I00
 sg15
 (lp39
-I10
-aI150
+F10.0
+aF290.0
 asg17
 (itiddlywiki
 Tiddler
@@ -135,8 +135,8 @@ g14
 I00
 sg15
 (lp54
-I10
-aI290
+F10.0
+aF430.0
 asg17
 (itiddlywiki
 Tiddler
@@ -237,8 +237,8 @@ g14
 I00
 sg15
 (lp85
-F150.0
-aF150.0
+F10.0
+aF570.0
 asg17
 (itiddlywiki
 Tiddler
@@ -295,7 +295,7 @@ Tiddler
 p101
 (dp102
 g21
-Vbody {\u000a	background-color: black;\u000a	color: white;\u000a	font-family: helvetica;\u000a	margin: 0;\u000a	padding: 0;\u000a}\u000a.button {\u000a	width: calc(100vw * 0.04);\u000a}\u000a.button_text {\u000a	display: inline-block;\u000a	top: -15px;\u000a	position: relative;\u000a	left: 15px;\u000a}\u000a.act {\u000a	font-size: 75px;\u000a	width: 100%;\u000a	position: absolute;\u000a	text-align: center;\u000a	top: calc(50vh - 30px);\u000a}\u000a.act_button {\u000a	position: absolute;\u000a	top: 75vh;\u000a	right: 100px;\u000a	width: 20vw;\u000a}\u000aimg.eric {\u000a	position: absolute;\u000a	width: calc(100vw * 0.25);\u000a	left: calc(100vw * 0.25);\u000a	bottom: 0;\u000a}\u000aimg.chris {\u000a	position: absolute;\u000a	width: calc(100vw * 0.25);\u000a	left: calc(100vw * 0.42);\u000a	bottom: 0;\u000a}\u000a#sidebar {\u000a	display: none;\u000a}\u000a.scene {\u000a	width: 100vw;\u000a	height: calc(100vw * 0.42);\u000a	background-color: pink;\u000a	background-image: url('images/mockup.png');\u000a	background-size: 100%;\u000a	top: calc(50vh - (50vw * 0.42));\u000a	position: relative;\u000a	overflow-y: hidden;\u000a}\u000a.train0 {\u000a	background-image: url('images/train_0.png');\u000a}\u000a.train1 {\u000a	background-image: url('images/train_1.png');\u000a}\u000a.text {\u000a	padding: 10px;\u000a}\u000a.link.text {\u000a    padding: 10px;\u000a}\u000a.link.text:hover {\u000a    background-color: rgba(255, 255, 255, 0.2);\u000a    padding: 10px;\u000a}\u000a.dialog {\u000a	background-color: black;\u000a	font-size: 40px;\u000a	text-align: center;\u000a}\u000a.name_eric {\u000a	color: rgba(89, 125, 206, 1);\u000a}\u000a.name_chris {\u000a	color: rgba(206, 92, 89, 1);\u000a}\u000a.options {\u000a	width: 30vw;\u000a	height: 100%;\u000a}\u000a.options.eric {\u000a	background-color: rgba(89, 125, 206, 0.5);\u000a}\u000a.options.chris {\u000a	background-color: rgba(206, 92, 89, 0.5);\u000a	left: 70vw;\u000a	position: relative;\u000a}\u000a#passages {\u000a	margin-left: 0px;\u000a}\u000a.passage {\u000a	font-size: 20px;\u000a}\u000a.passage a, .passage a:hover, .passage a:link, .passage a:visited {\u000a	color: #fff;\u000a	text-decoration: none;\u000a}\u000a.passage:not(.transition-out) {\u000a	transition: 0s;\u000a	-webkit-transition: 0s;\u000a}
+Vbody {\u000a	background-color: black;\u000a	color: white;\u000a	font-family: helvetica;\u000a	margin: 0;\u000a	padding: 0;\u000a}\u000a.button {\u000a	width: calc(100vw * 0.04);\u000a}\u000a.button_text {\u000a	display: inline-block;\u000a	top: -15px;\u000a	position: relative;\u000a	left: 15px;\u000a}\u000a.act {\u000a	font-size: 75px;\u000a	width: 100%;\u000a	position: absolute;\u000a	text-align: center;\u000a	top: calc(50vh - 30px);\u000a}\u000a.act_button {\u000a	position: absolute;\u000a	top: 75vh;\u000a	right: 100px;\u000a	width: 20vw;\u000a}\u000aimg.eric {\u000a	position: absolute;\u000a	width: calc(100vw * 0.267);\u000a	left: calc(100vw * 0.25);\u000a	bottom: 0px;\u000a}\u000aimg.chris {\u000a	position: absolute;\u000a	width: calc(100vw * 0.267);\u000a	left: calc(100vw * 0.42);\u000a	bottom: 0px;\u000a}\u000a.bar img.eric {\u000a	left: calc(100vw * 0.37);\u000a	bottom: 15px;\u000a}\u000a.bar img.chris {\u000a	left: calc(100vw * 0.45);\u000a	bottom: 15px;\u000a}\u000a#sidebar {\u000a	display: none;\u000a}\u000a.scene {\u000a	width: 100vw;\u000a	height: calc(100vw * 0.42);\u000a	background-color: pink;\u000a	background-image: url('images/mockup.png');\u000a	background-size: 100%;\u000a	top: calc(50vh - (50vw * 0.42));\u000a	position: relative;\u000a	overflow-y: hidden;\u000a}\u000a.scene0+.scene {\u000a	background-image: url('images/train_0.png');\u000a}\u000a.scene1+.scene {\u000a	background-image: url('images/train_1.png');\u000a}\u000a.scene2+.scene {\u000a	background-image: url('images/train_2.png');\u000a}\u000a.scene0+.scene.bar {\u000a	background-image: url('images/bar_0.png');\u000a}\u000a.text {\u000a	padding: 10px;\u000a}\u000a.link.text {\u000a    padding: 10px;\u000a}\u000a.link.text:hover {\u000a    background-color: rgba(255, 255, 255, 0.2);\u000a    padding: 10px;\u000a}\u000a.dialog {\u000a	background-color: black;\u000a	font-size: 40px;\u000a	text-align: center;\u000a}\u000a.name_eric {\u000a	color: rgba(89, 125, 206, 1);\u000a}\u000a.name_chris {\u000a	color: rgba(206, 92, 89, 1);\u000a}\u000a.options {\u000a	width: 30vw;\u000a	height: 100%;\u000a}\u000a.options.eric {\u000a	background-color: rgba(89, 125, 206, 0.5);\u000a}\u000a.options.chris {\u000a	background-color: rgba(206, 92, 89, 0.5);\u000a	left: 70vw;\u000a	position: relative;\u000a}\u000a#passages {\u000a	margin-left: 0px;\u000a}\u000a.passage {\u000a	font-size: 20px;\u000a}\u000a.passage a, .passage a:hover, .passage a:link, .passage a:visited {\u000a	color: #fff;\u000a	text-decoration: none;\u000a}\u000a.passage:not(.transition-out) {\u000a	transition: 0.5s;\u000a	-webkit-transition: 0.5s;\u000a}
 p103
 sg23
 Vstylesheet
@@ -304,12 +304,12 @@ sg25
 g26
 ((I2014
 I9
+I7
+I13
+I0
+I21
 I6
-I21
-I21
-I20
-I5
-I249
+I250
 I1
 tp105
 (dp106
@@ -347,7 +347,7 @@ Tiddler
 p117
 (dp118
 g21
-V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Désolé, je n'en ai pas. Vous savez que ce n'est pas très bon pour vous?</div><div class="options chris"><<keypress [[Ouais|Chris Ouais cigarettes]] [[Vous êtes qui?|Chris Qui es tu]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Désolé, je n'en ai pas. Vous savez que ce n'est pas très bon pour vous?</div><div class="options chris"><<keypress [[Ouais|Chris Ouais cigarettes]] [[Vous êtes qui?|Chris Qui es tu]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
 p119
 sg23
 VEric No
@@ -356,12 +356,12 @@ sg25
 g26
 ((I2014
 I9
+I7
+I13
+I48
+I55
 I6
-I21
-I45
-I42
-I5
-I249
+I250
 I1
 tp121
 (dp122
@@ -447,7 +447,7 @@ Tiddler
 p147
 (dp148
 g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Vous êtes qui, ma mère?</div><div class="options eric"><<keypress [[Je suis médecin.|Eric Medecin]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Vous êtes qui, ma mère?</div><div class="options eric"><<keypress [[Conséder|Eric Conseder]] [[Défendre|Eric Defendre]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
 p149
 sg23
 VChris Qui es tu
@@ -456,12 +456,12 @@ sg25
 g26
 ((I2014
 I9
+I7
+I13
+I49
+I15
 I6
-I21
-I45
-I58
-I5
-I249
+I250
 I1
 tp151
 (dp152
@@ -489,29 +489,29 @@ g14
 I00
 sg15
 (lp161
-F290.0
-aF710.0
+F570.0
+aF290.0
 asg17
 (itiddlywiki
 Tiddler
 p162
 (dp163
 g21
-V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Je suis médecin.</div><div class="options chris"><<if $day is 0>><<keypress [[*Continue*|AltStart]]>><<endif>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div><<set $eric_title to "medecin">><<set $day += 1>>
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Pardonnez-moi, vez-vous l'heure?</div><div class="options eric"><<keypress [[Oui|Eric Oui heure]] [[Non|Eric Non heure]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>\u000a<<set $heure to true>>
 p164
 sg23
-VEric Medecin
+VChris Heure
 p165
 sg25
 g26
 ((I2014
 I9
+I7
+I14
+I16
+I24
 I6
-I21
-I12
-I58
-I5
-I249
+I250
 I1
 tp166
 (dp167
@@ -525,8 +525,8 @@ g26
 I9
 I6
 I20
-I38
-I21
+I45
+I36
 I5
 I249
 I1
@@ -539,29 +539,29 @@ g14
 I00
 sg15
 (lp176
-F430.0
-aF150.0
+F150.0
+aF430.0
 asg17
 (itiddlywiki
 Tiddler
 p177
 (dp178
 g21
-V<div class="scene train1"><div class="options chris">\u005c\u000a<<if $cigarette is true>>\u005c\u000a<<keypress [[Demander l''heure|Chris Heure]]>>\u005c\u000a<<else if $heure is true>>\u005c\u000a<<keypress [[Cigarette|Chris Cigarette]]>>\u005c\u000a<<else>>\u005c\u000a<<keypress [[Cigarette|Chris Cigarette]] [[Demander l''heure|Chris Heure]]>>\u005c\u000a<<endif>>\u005c\u000a</div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> J'essaie d'arrêter, donc bien sûr.</div><div class="options chris"><<keypress [[Merci|Chris Merci]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
 p179
 sg23
-VStart1
+V Eric Yes
 p180
 sg25
 g26
 ((I2014
 I9
+I7
+I13
+I48
+I51
 I6
-I21
-I24
-I21
-I5
-I249
+I250
 I1
 tp181
 (dp182
@@ -575,8 +575,8 @@ g26
 I9
 I6
 I20
+I46
 I39
-I35
 I5
 I249
 I1
@@ -589,29 +589,29 @@ g14
 I00
 sg15
 (lp191
-F570.0
-aF290.0
+F150.0
+aF570.0
 asg17
 (itiddlywiki
 Tiddler
 p192
 (dp193
 g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Pardonnez-moi, quelle heure est-il?</div><div class="options eric"><<keypress [[Oui|Eric Oui heure]] [[Non|Eric Non heure]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>\u000a<<set heure to true>>
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Merci. Combien de temps depuis votre dernière?</div><div class="options eric"><<keypress [[Pas une heure|Eric 5 minutes]] [[Plusieurs jours|Eric Plusieurs jours]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
 p194
 sg23
-VChris Heure
+VChris Merci
 p195
 sg25
 g26
 ((I2014
 I9
+I7
+I13
+I49
+I12
 I6
-I20
-I55
-I39
-I5
-I249
+I250
 I1
 tp196
 (dp197
@@ -625,8 +625,8 @@ g26
 I9
 I6
 I20
-I45
-I36
+I47
+I56
 I5
 I249
 I1
@@ -640,28 +640,28 @@ I00
 sg15
 (lp206
 F150.0
-aF430.0
+aF710.0
 asg17
 (itiddlywiki
 Tiddler
 p207
 (dp208
 g21
-V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> J'essaie d'arrêter, donc bien sûr.</div><div class="options chris"><<keypress [[Merci|Chris Merci]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Pas une heure.</div><div class="options chris"><<keypress [[*Continue*|AltStart]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
 p209
 sg23
-V Eric Yes
+VEric 5 minutes
 p210
 sg25
 g26
 ((I2014
 I9
+I7
+I13
+I49
+I29
 I6
-I20
-I47
-I53
-I5
-I249
+I250
 I1
 tp211
 (dp212
@@ -675,8 +675,8 @@ g26
 I9
 I6
 I20
-I46
-I39
+I48
+I45
 I5
 I249
 I1
@@ -689,29 +689,29 @@ g14
 I00
 sg15
 (lp221
-F150.0
-aF570.0
+F10.0
+aF710.0
 asg17
 (itiddlywiki
 Tiddler
 p222
 (dp223
 g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Merci. Combien de temps depuis votre dernière?</div><div class="options eric"><<keypress [[Pas une heure|Eric 5 minutes]] [[Plusieurs jours|Eric Plusieurs jours]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Plusieurs jours, quand même.</div><div class="options chris"><<keypress [[*Continue*|AltStart]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
 p224
 sg23
-VChris Merci
+VEric Plusieurs jours
 p225
 sg25
 g26
 ((I2014
 I9
-I6
-I20
+I7
+I13
 I49
-I30
-I5
-I249
+I26
+I6
+I250
 I1
 tp226
 (dp227
@@ -725,8 +725,8 @@ g26
 I9
 I6
 I20
-I47
-I56
+I49
+I13
 I5
 I249
 I1
@@ -739,29 +739,29 @@ g14
 I00
 sg15
 (lp236
-F150.0
-aF710.0
+F430.0
+aF570.0
 asg17
 (itiddlywiki
 Tiddler
 p237
 (dp238
 g21
-V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Pas une heure.</div><div class="options chris"><<if $day is 0>><<keypress [[*Continue*|AltStart]]>><<endif>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div><<set $day += 1>>
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Ouais, je sais... Je devrais arrêter.</div><div class="options eric"><<keypress [[Truc|Eric Truc]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
 p239
 sg23
-VEric 5 minutes
+VChris Ouais cigarettes
 p240
 sg25
 g26
 ((I2014
 I9
+I7
+I13
+I49
+I19
 I6
-I21
-I12
-I55
-I5
-I249
+I250
 I1
 tp241
 (dp242
@@ -775,8 +775,8 @@ g26
 I9
 I6
 I20
-I48
-I45
+I56
+I37
 I5
 I249
 I1
@@ -789,29 +789,29 @@ g14
 I00
 sg15
 (lp251
-F10.0
-aF710.0
+F570.0
+aF10.0
 asg17
 (itiddlywiki
 Tiddler
 p252
 (dp253
 g21
-V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Plusieurs jours, quand même.</div><div class="options chris"><<if $day is 0>><<keypress [[*Continue*|AltStart]]>><<endif>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div><<set $day += 1>>
+V<<set $day+=1>><div class="act">\u005c\u000a<<if $day is 0>>Lundi\u005c\u000a<<else if $day is 1>>Mardi\u005c\u000a<<else if $day is 2>>Mercredi\u005c\u000a<<else if $day is 3>>Jeudi\u005c\u000a<<else if $day is 4>>Vendredi\u005c\u000a<<endif>></div><div class="act_button">\u005c\u000a<<keypress [[Start|Start0]]>></div>\u005c\u000a
 p254
 sg23
-VEric Plusieurs jours
+VAltStart
 p255
 sg25
 g26
 ((I2014
 I9
+I7
+I13
+I52
+I17
 I6
-I21
-I12
-I48
-I5
-I249
+I250
 I1
 tp256
 (dp257
@@ -824,9 +824,9 @@ g26
 ((I2014
 I9
 I6
-I20
-I49
-I13
+I16
+I36
+I58
 I5
 I249
 I1
@@ -839,29 +839,29 @@ g14
 I00
 sg15
 (lp266
-F710.0
-aF430.0
+F570.0
+aF150.0
 asg17
 (itiddlywiki
 Tiddler
 p267
 (dp268
 g21
-V
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="options chris">\u005c\u000a<<if $day < 2>>\u005c\u000a	<<if $cigarette is true>>\u005c\u000a	<<keypress [[Demander l''heure|Chris Heure]]>>\u005c\u000a	<<else if $heure is true>>\u005c\u000a	<<keypress [[Cigarette|Chris Cigarette]]>>\u005c\u000a	<<else>>\u005c\u000a	<<keypress [[Cigarette|Chris Cigarette]] [[Demander l''heure|Chris Heure]]>>\u005c\u000a	<<endif>>\u005c\u000a<<else if $day is 2>>\u005c\u000a	<<keypress [[Bonjour|Chris Bonjour]]>>\u005c\u000a<<else>>\u005c\u000a	<<if $eric_known is false>>\u005c\u000a		<<keypress [[Votre nom?|Chris Votre nom 2]]>>\u005c\u000a	<<else>>\u005c\u000a		<<keypress [[Bar ce soir?|Chris Bar ce soir]]>>\u005c\u000a	<<endif>>\u005c\u000a<<endif>>\u005c\u000a</div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
 p269
 sg23
-VEric Non heure
+VStart0
 p270
 sg25
 g26
 ((I2014
 I9
+I7
+I14
+I15
+I21
 I6
-I20
-I55
-I23
-I5
-I249
+I250
 I1
 tp271
 (dp272
@@ -870,157 +870,150 @@ Rp274
 sg31
 (lp275
 sg33
-g274
-sbsa(dp276
-g14
-I00
-sg15
-(lp277
-F570.0
-aF430.0
-asg17
-(itiddlywiki
-Tiddler
-p278
-(dp279
-g21
-g269
-sg23
-VEric Oui heure
-p280
-sg25
-g26
-((I2014
-I9
-I6
-I20
-I55
-I42
-I5
-I249
-I1
-tp281
-(dp282
-tp283
-Rp284
-sg31
-(lp285
-sg33
-g284
-sbsa(dp286
-g14
-I00
-sg15
-(lp287
-F430.0
-aF570.0
-asg17
-(itiddlywiki
-Tiddler
-p288
-(dp289
-g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Ouais, je sais... Je devrais arrêter.</div><div class="options eric"><<keypress [[Truc|Eric Truc]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
-p290
-sg23
-VChris Ouais cigarettes
-p291
-sg25
-g26
-((I2014
-I9
-I6
-I20
-I57
-I31
-I5
-I249
-I1
-tp292
-(dp293
-tp294
-Rp295
-sg31
-(lp296
-sg33
-g26
-((I2014
-I9
-I6
-I20
-I56
-I37
-I5
-I249
-I1
-tp297
-(dp298
-tp299
-Rp300
-sbsa(dp301
-g14
-I00
-sg15
-(lp302
-F430.0
-aF710.0
-asg17
-(itiddlywiki
-Tiddler
-p303
-(dp304
-g21
-g269
-sg23
-VEric Truc
-p305
-sg25
-g26
-((I2014
-I9
-I6
-I20
-I57
-I33
-I5
-I249
-I1
-tp306
-(dp307
-tp308
-Rp309
-sg31
-(lp310
-sg33
-g309
-sbsa(dp311
-g14
-I00
-sg15
-(lp312
-F570.0
-aF10.0
-asg17
-(itiddlywiki
-Tiddler
-p313
-(dp314
-g21
-V<div class="act">\u005c\u000a<<if $day is 0>>Lundi\u005c\u000a<<else if $day is 1>>Mardi\u005c\u000a<<else if $day is 2>>Mercredi\u005c\u000a<<endif>></div><div class="act_button">\u005c\u000a<<if $day is 0>>\u005c\u000a<<keypress [[Start|Start0]]>>\u005c\u000a<<elseif $day is 1>>\u005c\u000a<<keypress [[Start|Start1]]>>\u005c\u000a<<elseif $day is 2>>\u005c\u000a<<keypress [[Start|Start2]]>>\u005c\u000a<<endif>>\u000a</div>
-p315
-sg23
-VAltStart
-p316
-sg25
 g26
 ((I2014
 I9
 I6
 I21
 I24
-I2
+I5
 I5
 I249
+I1
+tp276
+(dp277
+tp278
+Rp279
+sbsa(dp280
+g14
+I00
+sg15
+(lp281
+F10.0
+aF150.0
+asg17
+(itiddlywiki
+Tiddler
+p282
+(dp283
+g21
+V(function() {\u000a  try {\u000a    version.extensions['sceneMacro'] = {\u000a      major:1, minor:0, revision:0 \u000a    };\u000a    macros['scene'] = {\u000a      handler: function(place, macroName, params, parser) {\u000a		var p = params[0];\u000a		console.log(p);\u000a		var el = document.createElement('div');\u000a		if(p === '0' || p ==='3') {\u000a			el.className = 'scene0';\u000a		} else if(p === '1' || p === '4') {\u000a			el.className = 'scene1';\u000a		} else if(p === '2' || p === '5') {\u000a			el.className = 'scene2';\u000a		}\u000a		place.appendChild(el);\u000a      },\u000a      init: function() {\u000a      },\u000a    };\u000a  } catch(e) {\u000a    throwError(place, 'Macro error: ' + e.message); \u000a  }\u000a})();
+p284
+sg23
+VsceneMacro
+p285
+sg25
+g26
+((I2014
+I9
+I7
+I11
+I25
+I11
+I6
+I250
+I1
+tp286
+(dp287
+tp288
+Rp289
+sg31
+(lp290
+Vscript
+p291
+asg33
+g26
+((I2014
+I9
+I7
+I10
+I36
+I10
+I6
+I250
+I1
+tp292
+(dp293
+tp294
+Rp295
+sbsa(dp296
+g14
+I00
+sg15
+(lp297
+F290.0
+aF710.0
+asg17
+(itiddlywiki
+Tiddler
+p298
+(dp299
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Vous avez raison, je ne devrais pas commenter.</div><div class="options chris"><<keypress [[*Continue*|AltStart]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+p300
+sg23
+VEric Conseder
+p301
+sg25
+g26
+((I2014
+I9
+I7
+I13
+I49
+I32
+I6
+I250
+I1
+tp302
+(dp303
+tp304
+Rp305
+sg31
+(lp306
+sg33
+g26
+((I2014
+I9
+I7
+I11
+I8
+I12
+I6
+I250
+I1
+tp307
+(dp308
+tp309
+Rp310
+sbsa(dp311
+g14
+I00
+sg15
+(lp312
+F430.0
+aF710.0
+asg17
+(itiddlywiki
+Tiddler
+p313
+(dp314
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Je ne fais qu'avertir, vous en faîtes ce que vous voulez. Vous continuez à fumer, et c'est une mauvaise idée.</div><div class="options chris"><<keypress [[*Continue*|AltStart]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+p315
+sg23
+VEric Defendre
+p316
+sg25
+g26
+((I2014
+I9
+I7
+I13
+I49
+I35
+I6
+I250
 I1
 tp317
 (dp318
@@ -1032,12 +1025,12 @@ sg33
 g26
 ((I2014
 I9
+I7
+I11
+I8
+I45
 I6
-I16
-I36
-I58
-I5
-I249
+I250
 I1
 tp322
 (dp323
@@ -1049,28 +1042,28 @@ I00
 sg15
 (lp327
 F570.0
-aF150.0
+aF430.0
 asg17
 (itiddlywiki
 Tiddler
 p328
 (dp329
 g21
-V<div class="scene train2"><div class="options chris">\u005c\u000a<<if $cigarette is true>>\u005c\u000a<<keypress [[Demander l''heure|Chris Heure]]>>\u005c\u000a<<else if $heure is true>>\u005c\u000a<<keypress [[Cigarette|Chris Cigarette]]>>\u005c\u000a<<else>>\u005c\u000a<<keypress [[Cigarette|Chris Cigarette]] [[Demander l''heure|Chris Heure]]>>\u005c\u000a<<endif>>\u005c\u000a</div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Il est 8h45.</div><div class="options chris"><<keypress [[*Continue*|AltStart]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
 p330
 sg23
-VStart2
+VEric Oui heure
 p331
 sg25
 g26
 ((I2014
 I9
+I7
+I13
+I48
+I58
 I6
-I21
-I24
-I25
-I5
-I249
+I250
 I1
 tp332
 (dp333
@@ -1082,12 +1075,12 @@ sg33
 g26
 ((I2014
 I9
+I7
+I11
+I10
+I45
 I6
-I21
-I24
-I5
-I5
-I249
+I250
 I1
 tp337
 (dp338
@@ -1098,29 +1091,29 @@ g14
 I00
 sg15
 (lp342
-F290.0
-aF150.0
+F710.0
+aF430.0
 asg17
 (itiddlywiki
 Tiddler
 p343
 (dp344
 g21
-V<div class="scene train0"><div class="options chris">\u005c\u000a<<if $cigarette is true>>\u005c\u000a<<keypress [[Demander l''heure|Chris Heure]]>>\u005c\u000a<<else if $heure is true>>\u005c\u000a<<keypress [[Cigarette|Chris Cigarette]]>>\u005c\u000a<<else>>\u005c\u000a<<keypress [[Cigarette|Chris Cigarette]] [[Demander l''heure|Chris Heure]]>>\u005c\u000a<<endif>>\u005c\u000a</div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Désolé, je n'ai pas l'heure.</div><div class="options chris"><<keypress [[*Continue*|AltStart]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
 p345
 sg23
-VStart0
+VEric Non heure
 p346
 sg25
 g26
 ((I2014
 I9
+I7
+I13
+I49
+I1
 I6
-I21
-I24
-I15
-I5
-I249
+I250
 I1
 tp347
 (dp348
@@ -1132,6 +1125,356 @@ sg33
 g26
 ((I2014
 I9
+I7
+I11
+I11
+I39
+I6
+I250
+I1
+tp352
+(dp353
+tp354
+Rp355
+sbsa(dp356
+g14
+I00
+sg15
+(lp357
+F850.0
+aF290.0
+asg17
+(itiddlywiki
+Tiddler
+p358
+(dp359
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Bonjour, comment allez-vous ce matin?</div><div class="options eric"><<keypress [[Bien|Eric Bien]] [[Bien?|Eric Bien alt]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+p360
+sg23
+VChris Bonjour
+p361
+sg25
+g26
+((I2014
+I9
+I7
+I13
+I48
+I42
+I6
+I250
+I1
+tp362
+(dp363
+tp364
+Rp365
+sg31
+(lp366
+sg33
+g26
+((I2014
+I9
+I7
+I11
+I18
+I39
+I6
+I250
+I1
+tp367
+(dp368
+tp369
+Rp370
+sbsa(dp371
+g14
+I00
+sg15
+(lp372
+F850.0
+aF430.0
+asg17
+(itiddlywiki
+Tiddler
+p373
+(dp374
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Ça va bien! Quelle coincidence de vous revoir trois jours de suite.</div><div class="options chris"><<keypress [[Je m''appelle Chris|Chris Je mappelle]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+p375
+sg23
+VEric Bien
+p376
+sg25
+g26
+((I2014
+I9
+I7
+I13
+I49
+I4
+I6
+I250
+I1
+tp377
+(dp378
+tp379
+Rp380
+sg31
+(lp381
+sg33
+g26
+((I2014
+I9
+I7
+I11
+I19
+I53
+I6
+I250
+I1
+tp382
+(dp383
+tp384
+Rp385
+sbsa(dp386
+g14
+I00
+sg15
+(lp387
+F990.0
+aF430.0
+asg17
+(itiddlywiki
+Tiddler
+p388
+(dp389
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Heu... Ça va bien?</div><div class="options chris"><<keypress [[Vous ne vous rappelez pas?|Chris Rappelez pas]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+p390
+sg23
+VEric Bien alt
+p391
+sg25
+g26
+((I2014
+I9
+I7
+I13
+I49
+I8
+I6
+I250
+I1
+tp392
+(dp393
+tp394
+Rp395
+sg31
+(lp396
+sg33
+g26
+((I2014
+I9
+I7
+I11
+I19
+I53
+I6
+I250
+I1
+tp397
+(dp398
+tp399
+Rp400
+sbsa(dp401
+g14
+I00
+sg15
+(lp402
+F990.0
+aF570.0
+asg17
+(itiddlywiki
+Tiddler
+p403
+(dp404
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Vous ne vous rappelez pas? On s'est parlé deux jours de suite.</div><div class="options eric"><<keypress [[Ah oui!|Eric Ah oui]] [[Heu...|Eric Heu...]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+p405
+sg23
+VChris Rappelez pas
+p406
+sg25
+g26
+((I2014
+I9
+I7
+I13
+I49
+I40
+I6
+I250
+I1
+tp407
+(dp408
+tp409
+Rp410
+sg31
+(lp411
+sg33
+g26
+((I2014
+I9
+I7
+I11
+I21
+I21
+I6
+I250
+I1
+tp412
+(dp413
+tp414
+Rp415
+sbsa(dp416
+g14
+I00
+sg15
+(lp417
+F1130.0
+aF710.0
+asg17
+(itiddlywiki
+Tiddler
+p418
+(dp419
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Ah bon?</div><div class="options chris"><<keypress [[Je m''appelle Chris|Chris Je mappelle]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+p420
+sg23
+VEric Heu...
+p421
+sg25
+g26
+((I2014
+I9
+I7
+I13
+I49
+I47
+I6
+I250
+I1
+tp422
+(dp423
+tp424
+Rp425
+sg31
+(lp426
+sg33
+g26
+((I2014
+I9
+I7
+I11
+I22
+I14
+I6
+I250
+I1
+tp427
+(dp428
+tp429
+Rp430
+sbsa(dp431
+g14
+I00
+sg15
+(lp432
+F990.0
+aF710.0
+asg17
+(itiddlywiki
+Tiddler
+p433
+(dp434
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Ah! Vous êtes la personne qui m'a demandé une cigarette!</div><div class="options chris"><<keypress [[Je m''appelle Chris|Chris Je mappelle]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+p435
+sg23
+VEric Ah oui
+p436
+sg25
+g26
+((I2014
+I9
+I7
+I13
+I49
+I43
+I6
+I250
+I1
+tp437
+(dp438
+tp439
+Rp440
+sg31
+(lp441
+sg33
+g26
+((I2014
+I9
+I7
+I11
+I22
+I14
+I6
+I250
+I1
+tp442
+(dp443
+tp444
+Rp445
+sbsa(dp446
+g14
+I00
+sg15
+(lp447
+F1830.0
+aF150.0
+asg17
+(itiddlywiki
+Tiddler
+p448
+(dp449
+g21
+V<div class="act">\u005c\u000a<<if $day is 0>>Lundi soir\u005c\u000a<<else if $day is 1>>Mardi soir\u005c\u000a<<else if $day is 2>>Mercredi soir\u005c\u000a<<else if $day is 3>>Jeudi soir\u005c\u000a<<else if $day is 4>>Vendredi soir\u005c\u000a<<endif>></div><div class="act_button">\u005c\u000a<<keypress [[Start|Start1]]>></div>\u005c\u000a
+p450
+sg23
+VAltStart Bar
+p451
+sg25
+g26
+((I2014
+I9
+I7
+I14
+I19
+I37
+I6
+I250
+I1
+tp452
+(dp453
+tp454
+Rp455
+sg31
+(lp456
+sg33
+g26
+((I2014
+I9
 I6
 I21
 I24
@@ -1139,14 +1482,814 @@ I5
 I5
 I249
 I1
-tp352
-(dp353
-tp354
-Rp355
+tp457
+(dp458
+tp459
+Rp460
+sbsa(dp461
+g14
+I00
+sg15
+(lp462
+F850.0
+aF850.0
+asg17
+(itiddlywiki
+Tiddler
+p463
+(dp464
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Je m'appelle Chris.</div><div class="options eric"><<keypress [[D''accord.|Eric Daccord]] [[Eric|Eric Je mappelle]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+p465
+sg23
+VChris Je mappelle
+p466
+sg25
+g26
+((I2014
+I9
+I7
+I13
+I50
+I21
+I6
+I250
+I1
+tp467
+(dp468
+tp469
+Rp470
+sg31
+(lp471
+sg33
+g26
+((I2014
+I9
+I7
+I13
+I1
+I36
+I6
+I250
+I1
+tp472
+(dp473
+tp474
+Rp475
+sbsa(dp476
+g14
+I00
+sg15
+(lp477
+F850.0
+aF1550.0
+asg17
+(itiddlywiki
+Tiddler
+p478
+(dp479
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Je m'appelle Eric.</div><div class="options chris"><<keypress [[Enchanté|Chris Enchante]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div><<set $eric_known to true>>
+p480
+sg23
+VEric Je mappelle
+p481
+sg25
+g26
+((I2014
+I9
+I7
+I14
+I11
+I48
+I6
+I250
+I1
+tp482
+(dp483
+tp484
+Rp485
+sg31
+(lp486
+sg33
+g26
+((I2014
+I9
+I7
+I13
+I2
+I52
+I6
+I250
+I1
+tp487
+(dp488
+tp489
+Rp490
+sbsa(dp491
+g14
+I00
+sg15
+(lp492
+F990.0
+aF990.0
+asg17
+(itiddlywiki
+Tiddler
+p493
+(dp494
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> D'accord.</div><div class="options chris"><<keypress [[Votre nom?|Chris Votre nom]] [[...|Chris Silence]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+p495
+sg23
+VEric Daccord
+p496
+sg25
+g26
+((I2014
+I9
+I7
+I13
+I50
+I24
+I6
+I250
+I1
+tp497
+(dp498
+tp499
+Rp500
+sg31
+(lp501
+sg33
+g26
+((I2014
+I9
+I7
+I13
+I3
+I14
+I6
+I250
+I1
+tp502
+(dp503
+tp504
+Rp505
+sbsa(dp506
+g14
+I00
+sg15
+(lp507
+F990.0
+aF1130.0
+asg17
+(itiddlywiki
+Tiddler
+p508
+(dp509
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> ... Quel est votre nom?</div><div class="options eric"><<keypress [[*Silence*|Eric Silence]] [[Eric|Eric Je mappelle]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+p510
+sg23
+VChris Votre nom
+p511
+sg25
+g26
+((I2014
+I9
+I7
+I13
+I50
+I27
+I6
+I250
+I1
+tp512
+(dp513
+tp514
+Rp515
+sg31
+(lp516
+sg33
+g26
+((I2014
+I9
+I7
+I13
+I4
+I7
+I6
+I250
+I1
+tp517
+(dp518
+tp519
+Rp520
+sbsa(dp521
+g14
+I00
+sg15
+(lp522
+F990.0
+aF1410.0
+asg17
+(itiddlywiki
+Tiddler
+p523
+(dp524
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Chris:</span> ...</div><div class="options chris"><<keypress [[*Continue*|AltStart]] [[Je m''appelle Eric|Eric Je mappelle]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div><<set $eric_known to false>>
+p525
+sg23
+VChris Silence
+p526
+sg25
+g26
+((I2014
+I9
+I7
+I13
+I54
+I51
+I6
+I250
+I1
+tp527
+(dp528
+tp529
+Rp530
+sg31
+(lp531
+sg33
+g26
+((I2014
+I9
+I7
+I13
+I4
+I7
+I6
+I250
+I1
+tp532
+(dp533
+tp534
+Rp535
+sbsa(dp536
+g14
+I00
+sg15
+(lp537
+F1130.0
+aF1270.0
+asg17
+(itiddlywiki
+Tiddler
+p538
+(dp539
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> ...</div><div class="options chris"><<keypress [[*Continue*|AltStart]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div><<set $eric_known to false>>
+p540
+sg23
+VEric Silence
+p541
+sg25
+g26
+((I2014
+I9
+I7
+I13
+I50
+I30
+I6
+I250
+I1
+tp542
+(dp543
+tp544
+Rp545
+sg31
+(lp546
+sg33
+g26
+((I2014
+I9
+I7
+I13
+I5
+I11
+I6
+I250
+I1
+tp547
+(dp548
+tp549
+Rp550
+sbsa(dp551
+g14
+I00
+sg15
+(lp552
+F850.0
+aF1690.0
+asg17
+(itiddlywiki
+Tiddler
+p553
+(dp554
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Enchanté, Eric!</div><div class="options chris"><<keypress [[Bar ce soir?|Chris Bar ce soir]] [[À demain?|Chris A demain]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+p555
+sg23
+VChris Enchante
+p556
+sg25
+g26
+((I2014
+I9
+I7
+I13
+I57
+I3
+I6
+I250
+I1
+tp557
+(dp558
+tp559
+Rp560
+sg31
+(lp561
+sg33
+g26
+((I2014
+I9
+I7
+I13
+I54
+I4
+I6
+I250
+I1
+tp562
+(dp563
+tp564
+Rp565
+sbsa(dp566
+g14
+I00
+sg15
+(lp567
+F850.0
+aF1830.0
+asg17
+(itiddlywiki
+Tiddler
+p568
+(dp569
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> À demain, peut-être!</div><div class="options eric"><<keypress [[Ouais|Eric A demain ouais]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+p570
+sg23
+VChris A demain
+p571
+sg25
+g26
+((I2014
+I9
+I7
+I13
+I59
+I6
+I6
+I250
+I1
+tp572
+(dp573
+tp574
+Rp575
+sg31
+(lp576
+sg33
+g26
+((I2014
+I9
+I7
+I13
+I57
+I7
+I6
+I250
+I1
+tp577
+(dp578
+tp579
+Rp580
+sbsa(dp581
+g14
+I00
+sg15
+(lp582
+F990.0
+aF1830.0
+asg17
+(itiddlywiki
+Tiddler
+p583
+(dp584
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Dîtes, ça vous tente de se rejoindre dans un bar ce soir?</div><div class="options eric"><<keypress [[D''accord!|Eric Bar daccord]] [[On ne se connait pas|Eric Connait pas]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+p585
+sg23
+VChris Bar ce soir
+p586
+sg25
+g26
+((I2014
+I9
+I7
+I13
+I58
+I19
+I6
+I250
+I1
+tp587
+(dp588
+tp589
+Rp590
+sg31
+(lp591
+sg33
+g26
+((I2014
+I9
+I7
+I13
+I57
+I7
+I6
+I250
+I1
+tp592
+(dp593
+tp594
+Rp595
+sbsa(dp596
+g14
+I00
+sg15
+(lp597
+F1130.0
+aF1970.0
+asg17
+(itiddlywiki
+Tiddler
+p598
+(dp599
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Ouais, pourquoi pas?</div><div class="options chris"><<keypress [[*Continue*|AltStart Bar]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+p600
+sg23
+VEric Bar daccord
+p601
+sg25
+g26
+((I2014
+I9
+I7
+I14
+I0
+I26
+I6
+I250
+I1
+tp602
+(dp603
+tp604
+Rp605
+sg31
+(lp606
+sg33
+g26
+((I2014
+I9
+I7
+I13
+I58
+I21
+I6
+I250
+I1
+tp607
+(dp608
+tp609
+Rp610
+sbsa(dp611
+g14
+I00
+sg15
+(lp612
+F990.0
+aF1970.0
+asg17
+(itiddlywiki
+Tiddler
+p613
+(dp614
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Écoutez, on ne se connaî pas, c'est pas mon genre d'aller dans un bar avec un inconnu.</div><div class="options chris"><<keypress [[*Continue*|AltStart]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+p615
+sg23
+VEric Connait pas
+p616
+sg25
+g26
+((I2014
+I9
+I7
+I14
+I6
+I9
+I6
+I250
+I1
+tp617
+(dp618
+tp619
+Rp620
+sg31
+(lp621
+sg33
+g26
+((I2014
+I9
+I7
+I13
+I58
+I21
+I6
+I250
+I1
+tp622
+(dp623
+tp624
+Rp625
+sbsa(dp626
+g14
+I00
+sg15
+(lp627
+F850.0
+aF1970.0
+asg17
+(itiddlywiki
+Tiddler
+p628
+(dp629
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Ouais, on se voit demain.</div><div class="options chris"><<keypress [[*Continue*|AltStart]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+p630
+sg23
+VEric A demain ouais
+p631
+sg25
+g26
+((I2014
+I9
+I7
+I14
+I5
+I36
+I6
+I250
+I1
+tp632
+(dp633
+tp634
+Rp635
+sg31
+(lp636
+sg33
+g26
+((I2014
+I9
+I7
+I13
+I59
+I8
+I6
+I250
+I1
+tp637
+(dp638
+tp639
+Rp640
+sbsa(dp641
+g14
+I00
+sg15
+(lp642
+F1970.0
+aF290.0
+asg17
+(itiddlywiki
+Tiddler
+p643
+(dp644
+g21
+V<<scene 0>><div class="scene bar"><div class="options chris">\u000a</div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+p645
+sg23
+VStart1
+p646
+sg25
+g26
+((I2014
+I9
+I7
+I14
+I3
+I51
+I6
+I250
+I1
+tp647
+(dp648
+tp649
+Rp650
+sg31
+(lp651
+sg33
+g26
+((I2014
+I9
+I7
+I14
+I1
+I57
+I6
+I250
+I1
+tp652
+(dp653
+tp654
+Rp655
+sbsa(dp656
+g14
+I00
+sg15
+(lp657
+F570.0
+aF710.0
+asg17
+(itiddlywiki
+Tiddler
+p658
+(dp659
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Mon truc est de mâcher de la gomme.</div><div class="options chris"><<keypress [[J''essaierai ça.|Chris Jessaierai]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+p660
+sg23
+VEric Truc
+p661
+sg25
+g26
+((I2014
+I9
+I7
+I14
+I8
+I41
+I6
+I250
+I1
+tp662
+(dp663
+tp664
+Rp665
+sg31
+(lp666
+sg33
+g26
+((I2014
+I9
+I7
+I14
+I8
+I7
+I6
+I250
+I1
+tp667
+(dp668
+tp669
+Rp670
+sbsa(dp671
+g14
+I00
+sg15
+(lp672
+F570.0
+aF850.0
+asg17
+(itiddlywiki
+Tiddler
+p673
+(dp674
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> J'essaierai ça, merci du conseil!</div><div class="options eric"><<keypress [[*Continue*|AltStart]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+p675
+sg23
+VChris Jessaierai
+p676
+sg25
+g26
+((I2014
+I9
+I7
+I14
+I9
+I18
+I6
+I250
+I1
+tp677
+(dp678
+tp679
+Rp680
+sg31
+(lp681
+sg33
+g26
+((I2014
+I9
+I7
+I14
+I8
+I45
+I6
+I250
+I1
+tp682
+(dp683
+tp684
+Rp685
+sbsa(dp686
+g14
+I00
+sg15
+(lp687
+F1550.0
+aF290.0
+asg17
+(itiddlywiki
+Tiddler
+p688
+(dp689
+g21
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Bonjour! Vous ne m'avez toujours pas dit votre nom?</div><div class="options eric"><<keypress [[*Silence*|Eric Silence]] [[Eric|Eric Je mappelle]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+p690
+sg23
+VChris Votre nom 2
+p691
+sg25
+g26
+((I2014
+I9
+I7
+I14
+I15
+I59
+I6
+I250
+I1
+tp692
+(dp693
+tp694
+Rp695
+sg31
+(lp696
+sg33
+g26
+((I2014
+I9
+I7
+I14
+I14
+I21
+I6
+I250
+I1
+tp697
+(dp698
+tp699
+Rp700
 sbsasS'scale'
-p356
+p701
 F1.0
 sS'snapping'
-p357
+p702
 I01
 ss.
