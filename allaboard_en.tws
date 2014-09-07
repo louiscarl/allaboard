@@ -5,7 +5,7 @@ VC:\u005cUsers\u005cLouisCarl\u005cDesktop\u005ctest.html
 p2
 sS'saveDestination'
 p3
-S'C:\\Users\\LouisCarl\\Documents\\GitHub\\allaboard\\allaboard_en.tws'
+VC:\u005cUsers\u005cLouisCarl\u005cDocuments\u005cGitHub\u005callaboard\u005callaboard_en.tws
 p4
 sS'metadata'
 p5
@@ -2349,7 +2349,7 @@ Tiddler
 p718
 (dp719
 g21
-V<<scene 2>><div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> That explains trings! I'm happy you insisted to meet.</div><div class="options chris"><<keypress [[*Continue*|AltStart]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+V<<scene 2>><div class="scene bar"><div class="dialog eric"><span class="name_eric">Eric:</span> That explains trings! I'm happy you insisted to meet.</div><div class="options chris"><<keypress [[*Continue*|AltStart]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
 p720
 sg23
 VEric Ca explique
@@ -2359,9 +2359,9 @@ g26
 ((I2014
 I9
 I7
-I15
-I48
-I25
+I16
+I3
+I30
 I6
 I250
 I1
@@ -2399,7 +2399,7 @@ Tiddler
 p733
 (dp734
 g21
-V<<scene 2>><div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Oh yeah? You should continue, it seems to work.</div><div class="options chris"><<keypress [[*Continue*|AltStart]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+V<<scene 2>><div class="scene bar"><div class="dialog eric"><span class="name_eric">Eric:</span> Oh yeah? You should continue, it seems to work.</div><div class="options chris"><<keypress [[*Continue*|AltStart]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
 p735
 sg23
 VEric Ah bon
@@ -2409,9 +2409,9 @@ g26
 ((I2014
 I9
 I7
-I15
-I48
-I38
+I16
+I3
+I33
 I6
 I250
 I1
@@ -2499,7 +2499,7 @@ Tiddler
 p763
 (dp764
 g21
-V<<scene 2>><div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> I'm happy I got to meet you. Do you often talk with strangers like that?</div><div class="options chris"><<keypress [[New in town|Chris Nouveau en ville]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+V<<scene 2>><div class="scene bar"><div class="dialog eric"><span class="name_eric">Eric:</span> I'm happy I got to meet you. Do you often talk with strangers like that?</div><div class="options chris"><<keypress [[New in town|Chris Nouveau en ville]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
 p765
 sg23
 VEric Heureux
@@ -2509,9 +2509,9 @@ g26
 ((I2014
 I9
 I7
-I15
-I47
-I46
+I16
+I3
+I16
 I6
 I250
 I1
@@ -2549,7 +2549,7 @@ Tiddler
 p778
 (dp779
 g21
-V<<scene 2>><div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Not really, I'm simply new in town.</div><div class="options eric"><<keypress [[Oh yeah?|Eric Ah bon]] [[That explains things.|Eric Ca explique]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+V<<scene 2>><div class="scene bar"><div class="dialog chris"><span class="name_chris">Chris:</span> Not really, I'm simply new in town.</div><div class="options eric"><<keypress [[Oh yeah?|Eric Ah bon]] [[That explains things.|Eric Ca explique]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
 p780
 sg23
 VChris Nouveau en ville
@@ -2559,9 +2559,9 @@ g26
 ((I2014
 I9
 I7
-I15
-I48
-I7
+I16
+I3
+I27
 I6
 I250
 I1
