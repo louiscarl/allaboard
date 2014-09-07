@@ -37,7 +37,7 @@ p18
 (dp20
 S'text'
 p21
-V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Excuse me, could I bum you a cigarette?</div><div class="options eric"><<keypress [[No|Eric No]] [[Yes| Eric Yes]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>\u000a<<set $cigarette to true>>
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Excuse me, could I bum from you a cigarette?</div><div class="options eric"><<keypress [[No|Eric No]] [[Yes| Eric Yes]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>\u000a<<set $cigarette to true>>
 p22
 sS'title'
 p23
@@ -52,8 +52,8 @@ p26
 I9
 I7
 I15
-I25
-I18
+I51
+I59
 I6
 I250
 I1
@@ -397,7 +397,7 @@ Tiddler
 p132
 (dp133
 g21
-V<div class="act">Lundi</div><div class="act_button"><<keypress [[Start|Start0]]>></div><<set $day to 0>><<set $success to false>>
+V<div class="act">Monday</div><div class="act_button"><<keypress [[Start|Start0]]>></div><<set $day to 0>><<set $success to false>>
 p134
 sg23
 VStart
@@ -408,8 +408,8 @@ g26
 I9
 I7
 I15
-I5
-I7
+I50
+I38
 I6
 I250
 I1
@@ -1699,7 +1699,7 @@ Tiddler
 p523
 (dp524
 g21
-V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Chris:</span> ...</div><div class="options chris"><<keypress [[*Continue*|AltStart]] [[I''m Eric|Eric Je mappelle]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div><<set $eric_known to false>>
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog eric"><span class="name_eric">Chris:</span> ...</div><div class="options eric"><<keypress [[*Continue*|AltStart]] [[I''m Eric|Eric Je mappelle]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div><<set $eric_known to false>>
 p525
 sg23
 VChris Silence
@@ -1710,8 +1710,8 @@ g26
 I9
 I7
 I15
-I44
-I24
+I56
+I0
 I6
 I250
 I1
@@ -2249,7 +2249,7 @@ Tiddler
 p688
 (dp689
 g21
-V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Bonjour! Vous ne m'avez toujours pas dit votre nom?</div><div class="options eric"><<keypress [[*Silence*|Eric Silence]] [[Eric|Eric Je mappelle]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Hi! You still haven't told me your name?</div><div class="options eric"><<keypress [[*Silence*|Eric Silence]] [[Eric|Eric Je mappelle]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
 p690
 sg23
 VChris Votre nom 2
@@ -2259,9 +2259,9 @@ g26
 ((I2014
 I9
 I7
-I14
 I15
-I59
+I54
+I26
 I6
 I250
 I1
