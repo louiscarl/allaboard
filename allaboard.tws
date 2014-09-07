@@ -27,8 +27,8 @@ I00
 sS'pos'
 p15
 (lp16
-F430.0
-aF150.0
+F290.0
+aF290.0
 asS'passage'
 p17
 (itiddlywiki
@@ -37,11 +37,11 @@ p18
 (dp20
 S'text'
 p21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Why didn't you pay your tickets on time?</div><div class="options eric"><<keypress [[Apologize|Eric Apologize distracted]] [[What do you want me to say?|Eric Want me to say]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Pardonnez-moi, vous avez une cigarette?</div><div class="options eric"><<keypress [[Non|Eric No]] [[Oui| Eric Yes]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>\u000a<<set $cigarette to true>>
 p22
 sS'title'
 p23
-VStart1
+VChris Cigarette
 p24
 sS'modified'
 p25
@@ -51,9 +51,9 @@ p26
 ((I2014
 I9
 I6
-I18
-I23
-I27
+I20
+I52
+I43
 I5
 I249
 I1
@@ -295,7 +295,7 @@ Tiddler
 p101
 (dp102
 g21
-Vbody {\u000a	background-color: black;\u000a	color: white;\u000a	font-family: helvetica;\u000a	margin: 0;\u000a	padding: 0;\u000a}\u000a.button {\u000a	width: calc(100vw * 0.04);\u000a}\u000a.button_text {\u000a	display: inline-block;\u000a	top: -15px;\u000a	position: relative;\u000a	left: 15px;\u000a}\u000a.act {\u000a	font-size: 75px;\u000a	width: 100%;\u000a	position: absolute;\u000a	text-align: center;\u000a	top: calc(50vh - 30px);\u000a}\u000a.act_button {\u000a	position: absolute;\u000a	top: 75vh;\u000a	right: 100px;\u000a	width: 20vw;\u000a}\u000aimg.eric {\u000a	position: absolute;\u000a	width: calc(100vw * 0.25);\u000a	left: calc(100vw * 0.25);\u000a	bottom: 0;\u000a}\u000aimg.chris {\u000a	position: absolute;\u000a	width: calc(100vw * 0.25);\u000a	left: calc(100vw * 0.42);\u000a	bottom: 0;\u000a}\u000a#sidebar {\u000a	display: none;\u000a}\u000a.scene {\u000a	width: 100vw;\u000a	height: calc(100vw * 0.42);\u000a	background-color: pink;\u000a	background-image: url('images/mockup.png');\u000a	background-size: 100%;\u000a	top: calc(50vh - (50vw * 0.42));\u000a	position: relative;\u000a	overflow-y: hidden;\u000a}\u000a.text {\u000a	padding: 10px;\u000a}\u000a.link.text {\u000a    padding: 10px;\u000a}\u000a.link.text:hover {\u000a    background-color: rgba(255, 255, 255, 0.2);\u000a    padding: 10px;\u000a}\u000a.dialog {\u000a	background-color: black;\u000a	font-size: 40px;\u000a	text-align: center;\u000a}\u000a.name_eric {\u000a	color: rgba(89, 125, 206, 1);\u000a}\u000a.name_chris {\u000a	color: rgba(206, 92, 89, 1);\u000a}\u000a.options {\u000a	width: 30vw;\u000a	height: 100%;\u000a}\u000a.options.eric {\u000a	background-color: rgba(89, 125, 206, 0.5);\u000a}\u000a.options.chris {\u000a	background-color: rgba(206, 92, 89, 0.5);\u000a	left: 70vw;\u000a	position: relative;\u000a}\u000a#passages {\u000a	margin-left: 0px;\u000a}\u000a.passage {\u000a	font-size: 20px;\u000a}\u000a.passage a, .passage a:hover, .passage a:link, .passage a:visited {\u000a	color: #fff;\u000a	text-decoration: none;\u000a}\u000a.passage:not(.transition-out) {\u000a	transition: 0s;\u000a	-webkit-transition: 0s;\u000a}
+Vbody {\u000a	background-color: black;\u000a	color: white;\u000a	font-family: helvetica;\u000a	margin: 0;\u000a	padding: 0;\u000a}\u000a.button {\u000a	width: calc(100vw * 0.04);\u000a}\u000a.button_text {\u000a	display: inline-block;\u000a	top: -15px;\u000a	position: relative;\u000a	left: 15px;\u000a}\u000a.act {\u000a	font-size: 75px;\u000a	width: 100%;\u000a	position: absolute;\u000a	text-align: center;\u000a	top: calc(50vh - 30px);\u000a}\u000a.act_button {\u000a	position: absolute;\u000a	top: 75vh;\u000a	right: 100px;\u000a	width: 20vw;\u000a}\u000aimg.eric {\u000a	position: absolute;\u000a	width: calc(100vw * 0.25);\u000a	left: calc(100vw * 0.25);\u000a	bottom: 0;\u000a}\u000aimg.chris {\u000a	position: absolute;\u000a	width: calc(100vw * 0.25);\u000a	left: calc(100vw * 0.42);\u000a	bottom: 0;\u000a}\u000a#sidebar {\u000a	display: none;\u000a}\u000a.scene {\u000a	width: 100vw;\u000a	height: calc(100vw * 0.42);\u000a	background-color: pink;\u000a	background-image: url('images/mockup.png');\u000a	background-size: 100%;\u000a	top: calc(50vh - (50vw * 0.42));\u000a	position: relative;\u000a	overflow-y: hidden;\u000a}\u000a.train0 {\u000a	background-image: url('images/train_0.png');\u000a}\u000a.train1 {\u000a	background-image: url('images/train_1.png');\u000a}\u000a.text {\u000a	padding: 10px;\u000a}\u000a.link.text {\u000a    padding: 10px;\u000a}\u000a.link.text:hover {\u000a    background-color: rgba(255, 255, 255, 0.2);\u000a    padding: 10px;\u000a}\u000a.dialog {\u000a	background-color: black;\u000a	font-size: 40px;\u000a	text-align: center;\u000a}\u000a.name_eric {\u000a	color: rgba(89, 125, 206, 1);\u000a}\u000a.name_chris {\u000a	color: rgba(206, 92, 89, 1);\u000a}\u000a.options {\u000a	width: 30vw;\u000a	height: 100%;\u000a}\u000a.options.eric {\u000a	background-color: rgba(89, 125, 206, 0.5);\u000a}\u000a.options.chris {\u000a	background-color: rgba(206, 92, 89, 0.5);\u000a	left: 70vw;\u000a	position: relative;\u000a}\u000a#passages {\u000a	margin-left: 0px;\u000a}\u000a.passage {\u000a	font-size: 20px;\u000a}\u000a.passage a, .passage a:hover, .passage a:link, .passage a:visited {\u000a	color: #fff;\u000a	text-decoration: none;\u000a}\u000a.passage:not(.transition-out) {\u000a	transition: 0s;\u000a	-webkit-transition: 0s;\u000a}
 p103
 sg23
 Vstylesheet
@@ -305,9 +305,9 @@ g26
 ((I2014
 I9
 I6
-I18
-I0
-I42
+I21
+I21
+I20
 I5
 I249
 I1
@@ -339,27 +339,27 @@ g14
 I00
 sg15
 (lp116
-F570.0
-aF290.0
+F290.0
+aF430.0
 asg17
 (itiddlywiki
 Tiddler
 p117
 (dp118
 g21
-V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Dude, what do you want me to say? I forgot, OK?</div><div class="options chris"><<keypress [[Insist on the subject|Chris Insist subject]] [[Change the subject|Chris Change subject]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Désolé, je n'en ai pas. Vous savez que ce n'est pas très bon pour vous?</div><div class="options chris"><<keypress [[Ouais|Chris Ouais cigarettes]] [[Vous êtes qui?|Chris Qui es tu]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
 p119
 sg23
-VEric Want me to say
+VEric No
 p120
 sg25
 g26
 ((I2014
 I9
 I6
-I15
-I44
-I31
+I21
+I45
+I42
 I5
 I249
 I1
@@ -375,8 +375,8 @@ g26
 I9
 I5
 I20
-I31
-I11
+I57
+I23
 I4
 I248
 I1
@@ -390,26 +390,26 @@ I00
 sg15
 (lp131
 F290.0
-aF290.0
+aF10.0
 asg17
 (itiddlywiki
 Tiddler
 p132
 (dp133
 g21
-V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> I'm sorry, I forgot! At least you're here to get me out of it.</div><div class="options chris"><<keypress [[Change the subject|Chris Change subject]] [[Press on the subject|Chris Insist subject]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>\u000a
+V<div class="act">Lundi</div><div class="act_button"><<keypress [[Start|Start0]]>></div><<set $day to 0>>
 p134
 sg23
-VEric Apologize distracted
+VStart
 p135
 sg25
 g26
 ((I2014
 I9
 I6
-I15
-I40
-I38
+I21
+I24
+I10
 I5
 I249
 I1
@@ -423,12 +423,12 @@ sg33
 g26
 ((I2014
 I9
+I6
+I16
+I36
+I58
 I5
-I20
-I32
-I54
-I4
-I248
+I249
 I1
 tp141
 (dp142
@@ -439,27 +439,27 @@ g14
 I00
 sg15
 (lp146
-F430.0
-aF1410.0
+F290.0
+aF570.0
 asg17
 (itiddlywiki
 Tiddler
 p147
 (dp148
 g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Oh shit! That's the station!</div><div class="options eric"><<keypress [[Hurry up!|Eric Hurry up]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Vous êtes qui, ma mère?</div><div class="options eric"><<keypress [[Je suis médecin.|Eric Medecin]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
 p149
 sg23
-VChris Missed the station
+VChris Qui es tu
 p150
 sg25
 g26
 ((I2014
 I9
 I6
-I15
-I43
-I33
+I21
+I45
+I58
 I5
 I249
 I1
@@ -473,12 +473,12 @@ sg33
 g26
 ((I2014
 I9
-I5
+I6
 I20
-I42
-I59
-I4
-I248
+I12
+I49
+I5
+I249
 I1
 tp156
 (dp157
@@ -489,27 +489,27 @@ g14
 I00
 sg15
 (lp161
-F570.0
-aF430.0
+F290.0
+aF710.0
 asg17
 (itiddlywiki
 Tiddler
 p162
 (dp163
 g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> I mean you just had to mail a check, it's not complicated.</div><div class="options eric"><<keypress [[I know|Eric I know]] [[Just shut up|Eric I know]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Je suis médecin.</div><div class="options chris"><<if $day is 0>><<keypress [[*Continue*|AltStart]]>><<endif>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div><<set $eric_title to "medecin">><<set $day += 1>>
 p164
 sg23
-VChris Insist subject
+VEric Medecin
 p165
 sg25
 g26
 ((I2014
 I9
 I6
-I15
-I42
-I31
+I21
+I12
+I58
 I5
 I249
 I1
@@ -523,12 +523,12 @@ sg33
 g26
 ((I2014
 I9
-I5
+I6
 I20
-I54
-I1
-I4
-I248
+I38
+I21
+I5
+I249
 I1
 tp171
 (dp172
@@ -539,27 +539,27 @@ g14
 I00
 sg15
 (lp176
-F290.0
-aF430.0
+F430.0
+aF150.0
 asg17
 (itiddlywiki
 Tiddler
 p177
 (dp178
 g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> So what do you want me to say exactly?</div><div class="options eric"><<keypress [[They told me...|Eric They told me]] [[Just show up|Eric Just show up]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+V<div class="scene train1"><div class="options chris">\u005c\u000a<<if $cigarette is true>>\u005c\u000a<<keypress [[Demander l''heure|Chris Heure]]>>\u005c\u000a<<else if $heure is true>>\u005c\u000a<<keypress [[Cigarette|Chris Cigarette]]>>\u005c\u000a<<else>>\u005c\u000a<<keypress [[Cigarette|Chris Cigarette]] [[Demander l''heure|Chris Heure]]>>\u005c\u000a<<endif>>\u005c\u000a</div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
 p179
 sg23
-VChris Change subject
+VStart1
 p180
 sg25
 g26
 ((I2014
 I9
 I6
-I15
-I42
+I21
 I24
+I21
 I5
 I249
 I1
@@ -573,12 +573,12 @@ sg33
 g26
 ((I2014
 I9
-I5
+I6
 I20
-I54
-I1
-I4
-I248
+I39
+I35
+I5
+I249
 I1
 tp186
 (dp187
@@ -589,27 +589,27 @@ g14
 I00
 sg15
 (lp191
-F150.0
-aF570.0
+F570.0
+aF290.0
 asg17
 (itiddlywiki
 Tiddler
 p192
 (dp193
 g21
-V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Well, when they called, they told me to bring a good citizen with me. I don't know, I guess they are going to make you swear an oath or something.</div><div class="options chris"><<keypress [[Nothing else?|Chris Nothing else]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Pardonnez-moi, quelle heure est-il?</div><div class="options eric"><<keypress [[Oui|Eric Oui heure]] [[Non|Eric Non heure]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>\u000a<<set heure to true>>
 p194
 sg23
-VEric They told me
+VChris Heure
 p195
 sg25
 g26
 ((I2014
 I9
 I6
-I15
-I44
-I44
+I20
+I55
+I39
 I5
 I249
 I1
@@ -623,12 +623,12 @@ sg33
 g26
 ((I2014
 I9
-I5
+I6
 I20
-I57
-I23
-I4
-I248
+I45
+I36
+I5
+I249
 I1
 tp201
 (dp202
@@ -639,27 +639,27 @@ g14
 I00
 sg15
 (lp206
-F290.0
-aF570.0
+F150.0
+aF430.0
 asg17
 (itiddlywiki
 Tiddler
 p207
 (dp208
 g21
-V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Just show up. You set a good example and stuff.</div><div class="options chris"><<keypress [[Nothing else?|Chris Nothing else]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> J'essaie d'arrêter, donc bien sûr.</div><div class="options chris"><<keypress [[Merci|Chris Merci]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
 p209
 sg23
-VEric Just show up
+V Eric Yes
 p210
 sg25
 g26
 ((I2014
 I9
 I6
-I15
-I44
-I48
+I20
+I47
+I53
 I5
 I249
 I1
@@ -673,12 +673,12 @@ sg33
 g26
 ((I2014
 I9
-I5
+I6
 I20
-I57
-I23
-I4
-I248
+I46
+I39
+I5
+I249
 I1
 tp216
 (dp217
@@ -689,7 +689,7 @@ g14
 I00
 sg15
 (lp221
-F570.0
+F150.0
 aF570.0
 asg17
 (itiddlywiki
@@ -697,19 +697,19 @@ Tiddler
 p222
 (dp223
 g21
-V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> I know, stop that.</div><div class="options chris"><<keypress [[Continue|Chris Continue]] [[Change the subject|Chris Change subject]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Merci. Combien de temps depuis votre dernière?</div><div class="options eric"><<keypress [[Pas une heure|Eric 5 minutes]] [[Plusieurs jours|Eric Plusieurs jours]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
 p224
 sg23
-VEric I know
+VChris Merci
 p225
 sg25
 g26
 ((I2014
 I9
 I6
-I15
-I44
-I53
+I20
+I49
+I30
 I5
 I249
 I1
@@ -723,12 +723,12 @@ sg33
 g26
 ((I2014
 I9
-I5
+I6
 I20
-I58
-I19
-I4
-I248
+I47
+I56
+I5
+I249
 I1
 tp231
 (dp232
@@ -739,7 +739,7 @@ g14
 I00
 sg15
 (lp236
-F710.0
+F150.0
 aF710.0
 asg17
 (itiddlywiki
@@ -747,19 +747,19 @@ Tiddler
 p237
 (dp238
 g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Or call them. It's not that hard, you take the phone and BEEP BOOP. That's it, man!</div><div class="options eric"><<keypress [[I''m not an idiot|Eric Not idiot]] [[Shut up, man!|Eric Shut up]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Pas une heure.</div><div class="options chris"><<if $day is 0>><<keypress [[*Continue*|AltStart]]>><<endif>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div><<set $day += 1>>
 p239
 sg23
-VChris Continue
+VEric 5 minutes
 p240
 sg25
 g26
 ((I2014
 I9
 I6
-I15
-I42
-I48
+I21
+I12
+I55
 I5
 I249
 I1
@@ -773,12 +773,12 @@ sg33
 g26
 ((I2014
 I9
-I5
+I6
 I20
-I59
-I47
-I4
-I248
+I48
+I45
+I5
+I249
 I1
 tp246
 (dp247
@@ -789,27 +789,27 @@ g14
 I00
 sg15
 (lp251
-F710.0
-aF850.0
+F10.0
+aF710.0
 asg17
 (itiddlywiki
 Tiddler
 p252
 (dp253
 g21
-V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Dude, shut the Crap up! I'm already pretty pissed.</div><div class="options chris"><<keypress [[Change the subject|Chris Change subject]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Plusieurs jours, quand même.</div><div class="options chris"><<if $day is 0>><<keypress [[*Continue*|AltStart]]>><<endif>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div><<set $day += 1>>
 p254
 sg23
-VEric Shut up
+VEric Plusieurs jours
 p255
 sg25
 g26
 ((I2014
 I9
 I6
-I16
-I28
-I56
+I21
+I12
+I48
 I5
 I249
 I1
@@ -823,12 +823,12 @@ sg33
 g26
 ((I2014
 I9
+I6
+I20
+I49
+I13
 I5
-I21
-I2
-I34
-I4
-I248
+I249
 I1
 tp261
 (dp262
@@ -839,27 +839,27 @@ g14
 I00
 sg15
 (lp266
-F570.0
-aF850.0
+F710.0
+aF430.0
 asg17
 (itiddlywiki
 Tiddler
 p267
 (dp268
 g21
-V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> I know how to pay my tickets, I'm not an idiot. I just forgot, and you're here to help me. Can we change the subject now?</div><div class="options chris"><<keypress [[Change the subject|Chris Change subject]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+V
 p269
 sg23
-VEric Not idiot
+VEric Non heure
 p270
 sg25
 g26
 ((I2014
 I9
 I6
-I18
-I30
-I44
+I20
+I55
+I23
 I5
 I249
 I1
@@ -870,942 +870,164 @@ Rp274
 sg31
 (lp275
 sg33
-g26
-((I2014
-I9
-I5
-I21
-I2
-I34
-I4
-I248
-I1
-tp276
-(dp277
-tp278
-Rp279
-sbsa(dp280
+g274
+sbsa(dp276
 g14
 I00
 sg15
-(lp281
-F150.0
-aF850.0
+(lp277
+F570.0
+aF430.0
 asg17
 (itiddlywiki
 Tiddler
-p282
-(dp283
+p278
+(dp279
 g21
-V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> I mean, it's just for unpaid parking tickets, why do I even have to go to court for that?</div><div class="options chris"><<keypress [[Well...|Chris Explain]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
-p284
+g269
 sg23
-VEric Complain
-p285
+VEric Oui heure
+p280
 sg25
 g26
 ((I2014
 I9
 I6
-I15
-I44
-I58
+I20
+I55
+I42
 I5
 I249
 I1
-tp286
-(dp287
-tp288
-Rp289
+tp281
+(dp282
+tp283
+Rp284
 sg31
-(lp290
+(lp285
 sg33
-g26
-((I2014
-I9
-I5
-I22
-I0
-I51
-I4
-I248
-I1
-tp291
-(dp292
-tp293
-Rp294
-sbsa(dp295
+g284
+sbsa(dp286
 g14
 I00
 sg15
+(lp287
+F430.0
+aF570.0
+asg17
+(itiddlywiki
+Tiddler
+p288
+(dp289
+g21
+V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Ouais, je sais... Je devrais arrêter.</div><div class="options eric"><<keypress [[Truc|Eric Truc]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+p290
+sg23
+VChris Ouais cigarettes
+p291
+sg25
+g26
+((I2014
+I9
+I6
+I20
+I57
+I31
+I5
+I249
+I1
+tp292
+(dp293
+tp294
+Rp295
+sg31
 (lp296
-F290.0
-aF990.0
+sg33
+g26
+((I2014
+I9
+I6
+I20
+I56
+I37
+I5
+I249
+I1
+tp297
+(dp298
+tp299
+Rp300
+sbsa(dp301
+g14
+I00
+sg15
+(lp302
+F430.0
+aF710.0
 asg17
 (itiddlywiki
 Tiddler
-p297
-(dp298
+p303
+(dp304
 g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Dude, you have twenty unpaid tickets.</div><div class="options eric"><<keypress [[I heard...|Eric I heard]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
-p299
+g269
 sg23
-VChris Explain
-p300
+VEric Truc
+p305
 sg25
 g26
 ((I2014
 I9
 I6
-I15
-I45
-I26
+I20
+I57
+I33
 I5
 I249
-I1
-tp301
-(dp302
-tp303
-Rp304
-sg31
-(lp305
-sg33
-g26
-((I2014
-I9
-I5
-I22
-I2
-I14
-I4
-I248
 I1
 tp306
 (dp307
 tp308
 Rp309
-sbsa(dp310
-g14
-I00
-sg15
-(lp311
-F290.0
-aF1130.0
-asg17
-(itiddlywiki
-Tiddler
-p312
-(dp313
-g21
-V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Yeah, but I heard from Jake that they negociated a deal with him, he only had to pay half.</div><div class="options chris"><<keypress [[Or...|Chris Or]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
-p314
-sg23
-VEric I heard
-p315
-sg25
-g26
-((I2014
-I9
-I6
-I15
-I45
-I32
-I5
-I249
-I1
-tp316
-(dp317
-tp318
-Rp319
 sg31
-(lp320
+(lp310
 sg33
-g26
-((I2014
-I9
-I5
-I22
-I4
-I3
-I4
-I248
-I1
-tp321
-(dp322
-tp323
-Rp324
-sbsa(dp325
+g309
+sbsa(dp311
 g14
 I00
 sg15
-(lp326
-F290.0
-aF1270.0
-asg17
-(itiddlywiki
-Tiddler
-p327
-(dp328
-g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Or, they just put you in jail. They're the man, man. They put people in jail.</div><div class="options chris"><<keypress [[Oh shit!|Chris Missed the station]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
-p329
-sg23
-VChris Or
-p330
-sg25
-g26
-((I2014
-I9
-I6
-I15
-I43
-I24
-I5
-I249
-I1
-tp331
-(dp332
-tp333
-Rp334
-sg31
-(lp335
-sg33
-g26
-((I2014
-I9
-I5
-I22
-I6
-I1
-I4
-I248
-I1
-tp336
-(dp337
-tp338
-Rp339
-sbsa(dp340
-g14
-I00
-sg15
-(lp341
-F290.0
-aF710.0
-asg17
-(itiddlywiki
-Tiddler
-p342
-(dp343
-g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> That's it? I just go and watch you look stupid in front of a judge?</div><div class="options eric"><<keypress [[Just unpaid tickets|Eric Complain]] [[I think so|Eric I think so]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
-p344
-sg23
-VChris Nothing else
-p345
-sg25
-g26
-((I2014
-I9
-I6
-I15
-I42
-I41
-I5
-I249
-I1
-tp346
-(dp347
-tp348
-Rp349
-sg31
-(lp350
-sg33
-g26
-((I2014
-I9
-I5
-I22
-I15
-I26
-I4
-I248
-I1
-tp351
-(dp352
-tp353
-Rp354
-sbsa(dp355
-g14
-I00
-sg15
-(lp356
-F290.0
-aF850.0
-asg17
-(itiddlywiki
-Tiddler
-p357
-(dp358
-g21
-V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> That's all I know, man. You don't trust me?</div><div class="options chris"><<keypress [[Well...|Chris Trust me]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
-p359
-sg23
-VEric I think so
-p360
-sg25
-g26
-((I2014
-I9
-I6
-I15
-I45
-I3
-I5
-I249
-I1
-tp361
-(dp362
-tp363
-Rp364
-sg31
-(lp365
-sg33
-g26
-((I2014
-I9
-I5
-I22
-I17
-I37
-I4
-I248
-I1
-tp366
-(dp367
-tp368
-Rp369
-sbsa(dp370
-g14
-I00
-sg15
-(lp371
-F430.0
-aF990.0
-asg17
-(itiddlywiki
-Tiddler
-p372
-(dp373
-g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Yeah... I trust you?</div><div class="options chris"><<keypress [[Oh shit!|Chris Missed the station]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
-p374
-sg23
-VChris Trust me
-p375
-sg25
-g26
-((I2014
-I9
-I6
-I15
-I42
-I58
-I5
-I249
-I1
-tp376
-(dp377
-tp378
-Rp379
-sg31
-(lp380
-sg33
-g26
-((I2014
-I9
-I5
-I22
-I19
-I4
-I4
-I248
-I1
-tp381
-(dp382
-tp383
-Rp384
-sbsa(dp385
-g14
-I00
-sg15
-(lp386
-F430.0
-aF1550.0
-asg17
-(itiddlywiki
-Tiddler
-p387
-(dp388
-g21
-V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Shit hurry up!</div><div class="options eric"><<keypress [[*Jump out*|Eric Jump out]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
-p389
-sg23
-VEric Hurry up
-p390
-sg25
-g26
-((I2014
-I9
-I6
-I15
-I45
-I45
-I5
-I249
-I1
-tp391
-(dp392
-tp393
-Rp394
-sg31
-(lp395
-sg33
-g26
-((I2014
-I9
-I5
-I22
-I22
-I26
-I4
-I248
-I1
-tp396
-(dp397
-tp398
-Rp399
-sbsa(dp400
-g14
-I00
-sg15
-(lp401
-F430.0
-aF1690.0
-asg17
-(itiddlywiki
-Tiddler
-p402
-(dp403
-g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> We missed the station.</div><div class="options eric"><<keypress [[...|Eric Dot dot dot]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
-p404
-sg23
-VEric Jump out
-p405
-sg25
-g26
-((I2014
-I9
-I6
-I15
-I43
-I52
-I5
-I249
-I1
-tp406
-(dp407
-tp408
-Rp409
-sg31
-(lp410
-sg33
-g26
-((I2014
-I9
-I5
-I22
-I23
-I35
-I4
-I248
-I1
-tp411
-(dp412
-tp413
-Rp414
-sbsa(dp415
-g14
-I00
-sg15
-(lp416
-F430.0
-aF1830.0
-asg17
-(itiddlywiki
-Tiddler
-p417
-(dp418
-g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> So... Do we have a plan?</div><div class="options eric"><<keypress [[...|Eric Dot dot dot 2]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
-p419
-sg23
-VEric Dot dot dot
-p420
-sg25
-g26
-((I2014
-I9
-I6
-I15
-I43
-I56
-I5
-I249
-I1
-tp421
-(dp422
-tp423
-Rp424
-sg31
-(lp425
-sg33
-g26
-((I2014
-I9
-I5
-I22
-I25
-I18
-I4
-I248
-I1
-tp426
-(dp427
-tp428
-Rp429
-sbsa(dp430
-g14
-I00
-sg15
-(lp431
-F430.0
-aF1970.0
-asg17
-(itiddlywiki
-Tiddler
-p432
-(dp433
-g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> We could call a taxi.</div><div class="options eric"><<keypress [[OK|Eric Call taxi]][[Too late|Eric Too late]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
-p434
-sg23
-VEric Dot dot dot 2
-p435
-sg25
-g26
-((I2014
-I9
-I6
-I15
-I44
-I0
-I5
-I249
-I1
-tp436
-(dp437
-tp438
-Rp439
-sg31
-(lp440
-sg33
-g26
-((I2014
-I9
-I5
-I22
-I25
-I57
-I4
-I248
-I1
-tp441
-(dp442
-tp443
-Rp444
-sbsa(dp445
-g14
-I00
-sg15
-(lp446
-F290.0
-aF2110.0
-asg17
-(itiddlywiki
-Tiddler
-p447
-(dp448
-g21
-V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> It's too late for that, man! I'm supposed to be in court in 10 minutes!</div><div class="options chris"><<keypress [[What do you propose?|Chris What you propose]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
-p449
-sg23
-VEric Too late
-p450
-sg25
-g26
-((I2014
-I9
-I6
-I15
-I46
-I12
-I5
-I249
-I1
-tp451
-(dp452
-tp453
-Rp454
-sg31
-(lp455
-sg33
-g26
-((I2014
-I9
-I5
-I22
-I27
-I52
-I4
-I248
-I1
-tp456
-(dp457
-tp458
-Rp459
-sbsa(dp460
-g14
-I00
-sg15
-(lp461
-F430.0
-aF2110.0
-asg17
-(itiddlywiki
-Tiddler
-p462
-(dp463
-g21
-V<div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> OK, let's call a taxi! What's the number?</div><div class="options chris"><<keypress [[I don''t know|Chris I dont know]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
-p464
-sg23
-VEric Call taxi
-p465
-sg25
-g26
-((I2014
-I9
-I6
-I15
-I46
-I18
-I5
-I249
-I1
-tp466
-(dp467
-tp468
-Rp469
-sg31
-(lp470
-sg33
-g26
-((I2014
-I9
-I5
-I22
-I27
-I52
-I4
-I248
-I1
-tp471
-(dp472
-tp473
-Rp474
-sbsa(dp475
-g14
-I00
-sg15
-(lp476
-F290.0
-aF2250.0
-asg17
-(itiddlywiki
-Tiddler
-p477
-(dp478
-g21
-V
-p479
-sg23
-VChris What you propose
-p480
-sg25
-g26
-((I2014
-I9
-I5
-I22
-I29
-I0
-I4
-I248
-I1
-tp481
-(dp482
-tp483
-Rp484
-sg31
-(lp485
-sg33
-g484
-sbsa(dp486
-g14
-I00
-sg15
-(lp487
-F430.0
-aF2250.0
-asg17
-(itiddlywiki
-Tiddler
-p488
-(dp489
-g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> I don't know. Plus, I forgot my cell phone.</div><div class="options eric"><<keypress [[Crap!|Eric Crap]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
-p490
-sg23
-VChris I dont know
-p491
-sg25
-g26
-((I2014
-I9
-I6
-I17
-I15
-I42
-I5
-I249
-I1
-tp492
-(dp493
-tp494
-Rp495
-sg31
-(lp496
-sg33
-g26
-((I2014
-I9
-I5
-I22
-I30
-I18
-I4
-I248
-I1
-tp497
-(dp498
-tp499
-Rp500
-sbsa(dp501
-g14
-I00
-sg15
-(lp502
-F430.0
-aF2390.0
-asg17
-(itiddlywiki
-Tiddler
-p503
-(dp504
-g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Crap! You know I don't have a cell phone, man! Why didn't you bring it?</div><div class="options eric"><<keypress [[Told you|Chris Told you]] [[Just buy one|Chris Just buy one]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
-p505
-sg23
-VEric Crap
-p506
-sg25
-g26
-((I2014
-I9
-I6
-I15
-I46
-I24
-I5
-I249
-I1
-tp507
-(dp508
-tp509
-Rp510
-sg31
-(lp511
-sg33
-g26
-((I2014
-I9
-I5
-I22
-I31
-I11
-I4
-I248
-I1
-tp512
-(dp513
-tp514
-Rp515
-sbsa(dp516
-g14
-I00
-sg15
-(lp517
-F290.0
-aF2530.0
-asg17
-(itiddlywiki
-Tiddler
-p518
-(dp519
-g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Why did- I didn't bring it because I forgot it! Why do you always have to depend on me? Just buy a Craping phone.</div><div class="options eric"><<keypress [[Told you|Act2]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
-p520
-sg23
-VChris Just buy one
-p521
-sg25
-g26
-((I2014
-I9
-I6
-I17
-I20
-I58
-I5
-I249
-I1
-tp522
-(dp523
-tp524
-Rp525
-sg31
-(lp526
-sg33
-g26
-((I2014
-I9
-I5
-I22
-I32
-I8
-I4
-I248
-I1
-tp527
-(dp528
-tp529
-Rp530
-sbsa(dp531
-g14
-I00
-sg15
-(lp532
-F430.0
-aF2530.0
-asg17
-(itiddlywiki
-Tiddler
-p533
-(dp534
-g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> I just told you, I forgot it. You know what you forgot to do? Pay twenty Craping parking tickets. Who does that?</div><div class="options eric"><<keypress [[Told you|Act2]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
-p535
-sg23
-VChris Told you
-p536
-sg25
-g26
-((I2014
-I9
-I6
-I17
-I21
-I13
-I5
-I249
-I1
-tp537
-(dp538
-tp539
-Rp540
-sg31
-(lp541
-sg33
-g26
-((I2014
-I9
-I5
-I22
-I32
-I8
-I4
-I248
-I1
-tp542
-(dp543
-tp544
-Rp545
-sbsa(dp546
-g14
-I00
-sg15
-(lp547
-F430.0
+(lp312
+F570.0
 aF10.0
 asg17
 (itiddlywiki
 Tiddler
-p548
-(dp549
+p313
+(dp314
 g21
-V<div class="act">Act 1</div><div class="act_button"><<keypress [[Start|Start1]]>></div>
-p550
+V<div class="act">\u005c\u000a<<if $day is 0>>Lundi\u005c\u000a<<else if $day is 1>>Mardi\u005c\u000a<<else if $day is 2>>Mercredi\u005c\u000a<<endif>></div><div class="act_button">\u005c\u000a<<if $day is 0>>\u005c\u000a<<keypress [[Start|Start0]]>>\u005c\u000a<<elseif $day is 1>>\u005c\u000a<<keypress [[Start|Start1]]>>\u005c\u000a<<elseif $day is 2>>\u005c\u000a<<keypress [[Start|Start2]]>>\u005c\u000a<<endif>>\u000a</div>
+p315
 sg23
-VStart
-p551
+VAltStart
+p316
 sg25
 g26
 ((I2014
 I9
 I6
-I16
-I41
-I47
+I21
+I24
+I2
 I5
 I249
 I1
-tp552
-(dp553
-tp554
-Rp555
+tp317
+(dp318
+tp319
+Rp320
 sg31
-(lp556
+(lp321
 sg33
 g26
 ((I2014
@@ -1817,407 +1039,114 @@ I58
 I5
 I249
 I1
-tp557
-(dp558
-tp559
-Rp560
-sbsa(dp561
+tp322
+(dp323
+tp324
+Rp325
+sbsa(dp326
 g14
 I00
 sg15
-(lp562
-F430.0
-aF2670.0
-asg17
-(itiddlywiki
-Tiddler
-p563
-(dp564
-g21
-V<div class="act">Act 2</div><div class="act_button"><<keypress [[Start|Start2]]>></div>
-p565
-sg23
-VAct2
-p566
-sg25
-g26
-((I2014
-I9
-I6
-I17
-I20
-I1
-I5
-I249
-I1
-tp567
-(dp568
-tp569
-Rp570
-sg31
-(lp571
-sg33
-g26
-((I2014
-I9
-I6
-I16
-I36
-I58
-I5
-I249
-I1
-tp572
-(dp573
-tp574
-Rp575
-sbsa(dp576
-g14
-I00
-sg15
-(lp577
-F990.0
+(lp327
+F570.0
 aF150.0
 asg17
 (itiddlywiki
 Tiddler
-p578
-(dp579
+p328
+(dp329
 g21
-V<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> There's no bus stops in this station. Do we wait for the next train?</div><div class="options eric"><<keypress [[Yes|Eric Yes]] [[No|Eric No]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
-p580
+V<div class="scene train2"><div class="options chris">\u005c\u000a<<if $cigarette is true>>\u005c\u000a<<keypress [[Demander l''heure|Chris Heure]]>>\u005c\u000a<<else if $heure is true>>\u005c\u000a<<keypress [[Cigarette|Chris Cigarette]]>>\u005c\u000a<<else>>\u005c\u000a<<keypress [[Cigarette|Chris Cigarette]] [[Demander l''heure|Chris Heure]]>>\u005c\u000a<<endif>>\u005c\u000a</div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+p330
 sg23
 VStart2
-p581
+p331
 sg25
 g26
 ((I2014
 I9
 I6
-I17
+I21
+I24
 I25
-I3
 I5
 I249
 I1
-tp582
-(dp583
-tp584
-Rp585
+tp332
+(dp333
+tp334
+Rp335
 sg31
-(lp586
+(lp336
 sg33
 g26
 ((I2014
 I9
 I6
-I17
-I20
-I6
+I21
+I24
+I5
 I5
 I249
 I1
-tp587
-(dp588
-tp589
-Rp590
-sbsa(dp591
+tp337
+(dp338
+tp339
+Rp340
+sbsa(dp341
 g14
 I00
 sg15
-(lp592
-F990.0
-aF290.0
-asg17
-(itiddlywiki
-Tiddler
-p593
-(dp594
-g21
-g479
-sg23
-VEric Yes
-p595
-sg25
-g26
-((I2014
-I9
-I6
-I17
-I25
-I52
-I5
-I249
-I1
-tp596
-(dp597
-tp598
-Rp599
-sg31
-(lp600
-sg33
-g26
-((I2014
-I9
-I6
-I17
-I25
-I7
-I5
-I249
-I1
-tp601
-(dp602
-tp603
-Rp604
-sbsa(dp605
-g14
-I00
-sg15
-(lp606
-F1130.0
-aF290.0
-asg17
-(itiddlywiki
-Tiddler
-p607
-(dp608
-g21
-g479
-sg23
-VEric No
-p609
-sg25
-g26
-((I2014
-I9
-I6
-I17
-I25
-I7
-I5
-I249
-I1
-tp610
-(dp611
-tp612
-Rp613
-sg31
-(lp614
-sg33
-g613
-sbsa(dp615
-g14
-I00
-sg15
-(lp616
-F1410.0
+(lp342
+F290.0
 aF150.0
 asg17
 (itiddlywiki
 Tiddler
-p617
-(dp618
+p343
+(dp344
 g21
-V<div class="act">Act 3</div><div class="act_button"><<keypress [[Start|Start3]]>></div>
-p619
+V<div class="scene train0"><div class="options chris">\u005c\u000a<<if $cigarette is true>>\u005c\u000a<<keypress [[Demander l''heure|Chris Heure]]>>\u005c\u000a<<else if $heure is true>>\u005c\u000a<<keypress [[Cigarette|Chris Cigarette]]>>\u005c\u000a<<else>>\u005c\u000a<<keypress [[Cigarette|Chris Cigarette]] [[Demander l''heure|Chris Heure]]>>\u005c\u000a<<endif>>\u005c\u000a</div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+p345
 sg23
-VAct3
-p620
+VStart0
+p346
 sg25
 g26
 ((I2014
 I9
 I6
-I17
-I28
-I33
+I21
+I24
+I15
 I5
 I249
 I1
-tp621
-(dp622
-tp623
-Rp624
+tp347
+(dp348
+tp349
+Rp350
 sg31
-(lp625
+(lp351
 sg33
 g26
 ((I2014
 I9
 I6
-I17
-I28
-I16
+I21
+I24
+I5
 I5
 I249
 I1
-tp626
-(dp627
-tp628
-Rp629
-sbsa(dp630
-g14
-I00
-sg15
-(lp631
-F1550.0
-aF150.0
-asg17
-(itiddlywiki
-Tiddler
-p632
-(dp633
-g21
-g479
-sg23
-VStart3
-p634
-sg25
-g26
-((I2014
-I9
-I6
-I17
-I28
-I37
-I5
-I249
-I1
-tp635
-(dp636
-tp637
-Rp638
-sg31
-(lp639
-sg33
-g638
-sbsa(dp640
-g14
-I00
-sg15
-(lp641
-F990.0
-aF430.0
-asg17
-(itiddlywiki
-Tiddler
-p642
-(dp643
-g21
-V<div class="scene"><div class="dialog other">Hey you two! Looking for a lift?</div><div class="options eric"><<keypress [[Thanks!|Eric Thanks]] [[Hum...|Eric Hum]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
-p644
-sg23
-VEnter car
-p645
-sg25
-g26
-((I2014
-I9
-I6
-I17
-I52
-I36
-I5
-I249
-I1
-tp646
-(dp647
-tp648
-Rp649
-sg31
-(lp650
-sg33
-g26
-((I2014
-I9
-I6
-I17
-I30
-I34
-I5
-I249
-I1
-tp651
-(dp652
-tp653
-Rp654
-sbsa(dp655
-g14
-I00
-sg15
-(lp656
-F1130.0
-aF570.0
-asg17
-(itiddlywiki
-Tiddler
-p657
-(dp658
-g21
-g479
-sg23
-VEric Hum
-p659
-sg25
-g26
-((I2014
-I9
-I6
-I17
-I31
-I47
-I5
-I249
-I1
-tp660
-(dp661
-tp662
-Rp663
-sg31
-(lp664
-sg33
-g663
-sbsa(dp665
-g14
-I00
-sg15
-(lp666
-F990.0
-aF570.0
-asg17
-(itiddlywiki
-Tiddler
-p667
-(dp668
-g21
-g479
-sg23
-VEric Thanks
-p669
-sg25
-g26
-((I2014
-I9
-I6
-I17
-I31
-I47
-I5
-I249
-I1
-tp670
-(dp671
-tp672
-Rp673
-sg31
-(lp674
-sg33
-g673
+tp352
+(dp353
+tp354
+Rp355
 sbsasS'scale'
-p675
+p356
 F1.0
 sS'snapping'
-p676
+p357
 I01
 ss.
