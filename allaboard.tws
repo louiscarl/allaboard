@@ -497,7 +497,7 @@ Tiddler
 p162
 (dp163
 g21
-V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Pardonnez-moi, vez-vous l'heure?</div><div class="options eric"><<keypress [[Oui|Eric Oui heure]] [[Non|Eric Non heure]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>\u000a<<set $heure to true>>
+V<<if $day is 0>><<scene 0>>\u005c\u000a<<elseif $day is 1>><<scene 1>>\u005c\u000a<<else>><<scene 2>>\u005c\u000a<<endif>>\u005c\u000a<div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Pardonnez-moi, avez-vous l'heure?</div><div class="options eric"><<keypress [[Oui|Eric Oui heure]] [[Non|Eric Non heure]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>\u000a<<set $heure to true>>
 p164
 sg23
 VChris Heure
@@ -507,9 +507,9 @@ g26
 ((I2014
 I9
 I7
-I14
-I16
-I24
+I15
+I49
+I19
 I6
 I250
 I1
@@ -2099,7 +2099,7 @@ Tiddler
 p643
 (dp644
 g21
-V<<scene 0>><div class="scene bar"><div class="options eric"><<keypress [[Heureux de t''avoir rencontré?|Eric Heureux]]>>\u000a</div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+V<<scene 0>><div class="scene bar"><div class="options eric"><<keypress [[Heureux de t''avoir rencontré|Eric Heureux]]>>\u000a</div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
 p645
 sg23
 VStart1
@@ -2110,8 +2110,8 @@ g26
 I9
 I7
 I15
-I19
-I28
+I49
+I14
 I6
 I250
 I1
