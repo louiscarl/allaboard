@@ -295,7 +295,7 @@ Tiddler
 p101
 (dp102
 g21
-Vbody {\u000a	background-color: black;\u000a	color: white;\u000a	font-family: helvetica;\u000a	margin: 0;\u000a	padding: 0;\u000a}\u000a.button {\u000a	width: calc(100vw * 0.04);\u000a}\u000a.button_text {\u000a	display: inline-block;\u000a	top: -15px;\u000a	position: relative;\u000a	left: 15px;\u000a}\u000a.act {\u000a	font-size: 75px;\u000a	width: 100%;\u000a	position: absolute;\u000a	text-align: center;\u000a	top: calc(50vh - 30px);\u000a}\u000a.act_button {\u000a	position: absolute;\u000a	top: 75vh;\u000a	right: 100px;\u000a	width: 20vw;\u000a}\u000aimg.eric {\u000a	position: absolute;\u000a	width: calc(100vw * 0.267);\u000a	left: calc(100vw * 0.25);\u000a	bottom: 0px;\u000a}\u000aimg.chris {\u000a	position: absolute;\u000a	width: calc(100vw * 0.267);\u000a	left: calc(100vw * 0.42);\u000a	bottom: 0px;\u000a}\u000a.bar img.eric {\u000a	left: calc(100vw * 0.37);\u000a	bottom: 15px;\u000a}\u000a.bar img.chris {\u000a	left: calc(100vw * 0.45);\u000a	bottom: 15px;\u000a}\u000a#sidebar {\u000a	display: none;\u000a}\u000a.scene {\u000a	width: 100vw;\u000a	height: calc(100vw * 0.42);\u000a	background-color: pink;\u000a	background-image: url('images/mockup.png');\u000a	background-size: 100%;\u000a	top: calc(50vh - (50vw * 0.42));\u000a	position: relative;\u000a	overflow-y: hidden;\u000a}\u000a.scene0+.scene {\u000a	background-image: url('images/train_0.png');\u000a}\u000a.scene1+.scene {\u000a	background-image: url('images/train_1.png');\u000a}\u000a.scene2+.scene {\u000a	background-image: url('images/train_2.png');\u000a}\u000a.scene0+.scene.bar {\u000a	background-image: url('images/bar_0.png');\u000a}\u000a.text {\u000a	padding: 10px;\u000a}\u000a.link.text {\u000a    padding: 10px;\u000a}\u000a.link.text:hover {\u000a    background-color: rgba(255, 255, 255, 0.2);\u000a    padding: 10px;\u000a}\u000a.dialog {\u000a	background-color: black;\u000a	font-size: 40px;\u000a	text-align: center;\u000a}\u000a.name_eric {\u000a	color: rgba(89, 125, 206, 1);\u000a}\u000a.name_chris {\u000a	color: rgba(206, 92, 89, 1);\u000a}\u000a.options {\u000a	width: 30vw;\u000a	height: 100%;\u000a}\u000a.options.eric {\u000a	background-color: rgba(89, 125, 206, 0.5);\u000a}\u000a.options.chris {\u000a	background-color: rgba(206, 92, 89, 0.5);\u000a	left: 70vw;\u000a	position: relative;\u000a}\u000a#passages {\u000a	margin-left: 0px;\u000a}\u000a.passage {\u000a	font-size: 20px;\u000a}\u000a.passage a, .passage a:hover, .passage a:link, .passage a:visited {\u000a	color: #fff;\u000a	text-decoration: none;\u000a}\u000a.passage:not(.transition-out) {\u000a	transition: 0.5s;\u000a	-webkit-transition: 0.5s;\u000a}
+Vbody {\u000a	background-color: black;\u000a	color: white;\u000a	font-family: helvetica;\u000a	margin: 0;\u000a	padding: 0;\u000a}\u000a.button {\u000a	width: calc(100vw * 0.04);\u000a}\u000a.button_text {\u000a	display: inline-block;\u000a	top: -15px;\u000a	position: relative;\u000a	left: 15px;\u000a}\u000a.act {\u000a	font-size: 75px;\u000a	width: 100%;\u000a	position: absolute;\u000a	text-align: center;\u000a	top: calc(50vh - 30px);\u000a}\u000a.act_button {\u000a	position: absolute;\u000a	top: 75vh;\u000a	right: 100px;\u000a	width: 20vw;\u000a}\u000aimg.eric {\u000a	position: absolute;\u000a	width: calc(100vw * 0.267);\u000a	left: calc(100vw * 0.25);\u000a	bottom: 0px;\u000a}\u000aimg.chris {\u000a	position: absolute;\u000a	width: calc(100vw * 0.267);\u000a	left: calc(100vw * 0.42);\u000a	bottom: 0px;\u000a}\u000a.bar img.eric {\u000a	left: calc(100vw * 0.37);\u000a	bottom: 15px;\u000a}\u000a.bar img.chris {\u000a	left: calc(100vw * 0.45);\u000a	bottom: 15px;\u000a}\u000a#sidebar {\u000a	display: none;\u000a}\u000a.scene {\u000a	width: 100vw;\u000a	height: calc(100vw * 0.42);\u000a	background-color: pink;\u000a	background-image: url('images/mockup.png');\u000a	background-size: 100%;\u000a	top: calc(50vh - (50vw * 0.42));\u000a	position: relative;\u000a	overflow-y: hidden;\u000a}\u000a.scene0+.scene {\u000a	background-image: url('images/train_0.png');\u000a}\u000a.scene1+.scene {\u000a	background-image: url('images/train_1.png');\u000a}\u000a.scene2+.scene {\u000a	background-image: url('images/train_2.png');\u000a}\u000a.scene0+.scene.bar {\u000a	background-image: url('images/bar_0.png');\u000a}\u000a.scene1+.scene.bar {\u000a	background-image: url('images/bar_1.png');\u000a}\u000a.scene2+.scene.bar {\u000a	background-image: url('images/bar_2.png');\u000a}\u000a.text {\u000a	padding: 10px;\u000a}\u000a.link.text {\u000a    padding: 10px;\u000a}\u000a.link.text:hover {\u000a    background-color: rgba(255, 255, 255, 0.2);\u000a    padding: 10px;\u000a}\u000a.dialog {\u000a	background-color: black;\u000a	font-size: 40px;\u000a	text-align: center;\u000a}\u000a.name_eric {\u000a	color: rgba(89, 125, 206, 1);\u000a}\u000a.name_chris {\u000a	color: rgba(206, 92, 89, 1);\u000a}\u000a.options {\u000a	width: 30vw;\u000a	height: 100%;\u000a}\u000a.options.eric {\u000a	background-color: rgba(89, 125, 206, 0.5);\u000a}\u000a.options.chris {\u000a	background-color: rgba(206, 92, 89, 0.5);\u000a	left: 70vw;\u000a	position: relative;\u000a}\u000a#passages {\u000a	margin-left: 0px;\u000a}\u000a.passage {\u000a	font-size: 20px;\u000a}\u000a.passage a, .passage a:hover, .passage a:link, .passage a:visited {\u000a	color: #fff;\u000a	text-decoration: none;\u000a}\u000a.passage:not(.transition-out) {\u000a	transition: 0.5s;\u000a	-webkit-transition: 0.5s;\u000a}
 p103
 sg23
 Vstylesheet
@@ -305,9 +305,9 @@ g26
 ((I2014
 I9
 I7
-I13
-I0
-I21
+I15
+I10
+I54
 I6
 I250
 I1
@@ -397,7 +397,7 @@ Tiddler
 p132
 (dp133
 g21
-V<div class="act">Lundi</div><div class="act_button"><<keypress [[Start|Start0]]>></div><<set $day to 0>>
+V<div class="act">Lundi</div><div class="act_button"><<keypress [[Start|Start0]]>></div><<set $day to 0>><<set $success to false>>
 p134
 sg23
 VStart
@@ -406,12 +406,12 @@ sg25
 g26
 ((I2014
 I9
-I6
-I21
-I24
-I10
+I7
+I15
 I5
-I249
+I7
+I6
+I250
 I1
 tp136
 (dp137
@@ -797,7 +797,7 @@ Tiddler
 p252
 (dp253
 g21
-V<<set $day+=1>><div class="act">\u005c\u000a<<if $day is 0>>Lundi\u005c\u000a<<else if $day is 1>>Mardi\u005c\u000a<<else if $day is 2>>Mercredi\u005c\u000a<<else if $day is 3>>Jeudi\u005c\u000a<<else if $day is 4>>Vendredi\u005c\u000a<<endif>></div><div class="act_button">\u005c\u000a<<keypress [[Start|Start0]]>></div>\u005c\u000a
+V<<set $day+=1>><div class="act">\u005c\u000a<<if $day is 0>>Lundi\u005c\u000a<<else if $day is 1>>Mardi\u005c\u000a<<else if $day is 2>>Mercredi\u005c\u000a<<else if $day is 3>>Jeudi\u005c\u000a<<else if $day is 4>>Vendredi\u005c\u000a<<else>>La semaine d'après\u005c\u000a<<endif>></div><div class="act_button">\u005c\u000a<<if $day < 5>>\u005c\u000a<<keypress [[Start|Start0]]>>\u005c\u000a<<else if $success is false>>\u005c\u000a<<keypress [[Start|StartEnd]]>>\u005c\u000a<<else>>\u005c\u000a<<keypress [[Start|StartEnd2]]>>\u005c\u000a<<endif>></div>\u005c\u000a
 p254
 sg23
 VAltStart
@@ -807,9 +807,9 @@ g26
 ((I2014
 I9
 I7
-I13
-I52
-I17
+I15
+I6
+I4
 I6
 I250
 I1
@@ -1449,7 +1449,7 @@ Tiddler
 p448
 (dp449
 g21
-V<div class="act">\u005c\u000a<<if $day is 0>>Lundi soir\u005c\u000a<<else if $day is 1>>Mardi soir\u005c\u000a<<else if $day is 2>>Mercredi soir\u005c\u000a<<else if $day is 3>>Jeudi soir\u005c\u000a<<else if $day is 4>>Vendredi soir\u005c\u000a<<endif>></div><div class="act_button">\u005c\u000a<<keypress [[Start|Start1]]>></div>\u005c\u000a
+V<div class="act">\u005c\u000a<<if $day is 0>>Lundi soir\u005c\u000a<<else if $day is 1>>Mardi soir\u005c\u000a<<else if $day is 2>>Mercredi soir\u005c\u000a<<else if $day is 3>>Jeudi soir\u005c\u000a<<else if $day is 4>>Vendredi soir\u005c\u000a<<endif>></div><div class="act_button">\u005c\u000a<<keypress [[Start|Start1]]>></div>\u005c\u000a<<set $success to true>><<set $day to 6>>
 p450
 sg23
 VAltStart Bar
@@ -1459,9 +1459,9 @@ g26
 ((I2014
 I9
 I7
-I14
-I19
-I37
+I15
+I7
+I50
 I6
 I250
 I1
@@ -2099,7 +2099,7 @@ Tiddler
 p643
 (dp644
 g21
-V<<scene 0>><div class="scene bar"><div class="options chris">\u000a</div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+V<<scene 0>><div class="scene bar"><div class="options eric"><<keypress [[Heureux de t''avoir rencontré?|Eric Heureux]]>>\u000a</div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
 p645
 sg23
 VStart1
@@ -2109,9 +2109,9 @@ g26
 ((I2014
 I9
 I7
-I14
-I3
-I51
+I15
+I19
+I28
 I6
 I250
 I1
@@ -2286,10 +2286,310 @@ tp697
 (dp698
 tp699
 Rp700
+sbsa(dp701
+g14
+I00
+sg15
+(lp702
+F1130.0
+aF10.0
+asg17
+(itiddlywiki
+Tiddler
+p703
+(dp704
+g21
+V<<scene 1>><div class="scene"><img class="eric" src="images/player_fade.gif" /><img class="chris" src="images/player2_fade.gif" /></div>
+p705
+sg23
+VStartEnd
+p706
+sg25
+g26
+((I2014
+I9
+I7
+I15
+I9
+I30
+I6
+I250
+I1
+tp707
+(dp708
+tp709
+Rp710
+sg31
+(lp711
+sg33
+g26
+((I2014
+I9
+I7
+I14
+I50
+I47
+I6
+I250
+I1
+tp712
+(dp713
+tp714
+Rp715
+sbsa(dp716
+g14
+I00
+sg15
+(lp717
+F1970.0
+aF710.0
+asg17
+(itiddlywiki
+Tiddler
+p718
+(dp719
+g21
+V<<scene 2>><div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Ça explique des choses! Je suis heureux que tu aies insisté.</div><div class="options chris"><<keypress [[*Continue*|AltStart]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+p720
+sg23
+VEric Ca explique
+p721
+sg25
+g26
+((I2014
+I9
+I7
+I15
+I21
+I26
+I6
+I250
+I1
+tp722
+(dp723
+tp724
+Rp725
+sg31
+(lp726
+sg33
+g26
+((I2014
+I9
+I7
+I15
+I2
+I22
+I6
+I250
+I1
+tp727
+(dp728
+tp729
+Rp730
+sbsa(dp731
+g14
+I00
+sg15
+(lp732
+F2110.0
+aF710.0
+asg17
+(itiddlywiki
+Tiddler
+p733
+(dp734
+g21
+V<<scene 2>><div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Ah bon? Tu devrais continuer ça, ça semble fonctionner.</div><div class="options chris"><<keypress [[*Continue*|AltStart]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+p735
+sg23
+VEric Ah bon
+p736
+sg25
+g26
+((I2014
+I9
+I7
+I15
+I21
+I55
+I6
+I250
+I1
+tp737
+(dp738
+tp739
+Rp740
+sg31
+(lp741
+sg33
+g26
+((I2014
+I9
+I7
+I15
+I2
+I22
+I6
+I250
+I1
+tp742
+(dp743
+tp744
+Rp745
+sbsa(dp746
+g14
+I00
+sg15
+(lp747
+F1130.0
+aF150.0
+asg17
+(itiddlywiki
+Tiddler
+p748
+(dp749
+g21
+V<<scene 2>><div class="scene bar"><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+p750
+sg23
+VStartEnd2
+p751
+sg25
+g26
+((I2014
+I9
+I7
+I15
+I10
+I58
+I6
+I250
+I1
+tp752
+(dp753
+tp754
+Rp755
+sg31
+(lp756
+sg33
+g26
+((I2014
+I9
+I7
+I15
+I6
+I6
+I6
+I250
+I1
+tp757
+(dp758
+tp759
+Rp760
+sbsa(dp761
+g14
+I00
+sg15
+(lp762
+F2110.0
+aF430.0
+asg17
+(itiddlywiki
+Tiddler
+p763
+(dp764
+g21
+V<<scene 2>><div class="scene"><div class="dialog eric"><span class="name_eric">Eric:</span> Je suis heureux d'avoir fait ta rencontre. Tu parles souvent à du monde dans le train?</div><div class="options chris"><<keypress [[Nouveau en ville|Chris Nouveau en ville]]>></div><img class="eric" src="images/player_talk.gif" /><img class="chris" src="images/player2_idle.gif" /></div>
+p765
+sg23
+VEric Heureux
+p766
+sg25
+g26
+((I2014
+I9
+I7
+I15
+I20
+I30
+I6
+I250
+I1
+tp767
+(dp768
+tp769
+Rp770
+sg31
+(lp771
+sg33
+g26
+((I2014
+I9
+I7
+I15
+I19
+I31
+I6
+I250
+I1
+tp772
+(dp773
+tp774
+Rp775
+sbsa(dp776
+g14
+I00
+sg15
+(lp777
+F2110.0
+aF570.0
+asg17
+(itiddlywiki
+Tiddler
+p778
+(dp779
+g21
+V<<scene 2>><div class="scene"><div class="dialog chris"><span class="name_chris">Chris:</span> Pas vraiment, je suis simplement tout nouveau en ville.</div><div class="options eric"><<keypress [[Ah bon?|Eric Ah bon]] [[Ça explique des choses.|Eric Ca explique]]>></div><img class="eric" src="images/player_idle.gif" /><img class="chris" src="images/player2_talk.gif" /></div>
+p780
+sg23
+VChris Nouveau en ville
+p781
+sg25
+g26
+((I2014
+I9
+I7
+I15
+I20
+I56
+I6
+I250
+I1
+tp782
+(dp783
+tp784
+Rp785
+sg31
+(lp786
+sg33
+g26
+((I2014
+I9
+I7
+I15
+I20
+I33
+I6
+I250
+I1
+tp787
+(dp788
+tp789
+Rp790
 sbsasS'scale'
-p701
-F1.0
+p791
+F0.4000000000000001
 sS'snapping'
-p702
+p792
 I01
 ss.
